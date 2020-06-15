@@ -5,14 +5,10 @@
       create: true
       force: true
 
-#- create:
-#    - ~/.z
+- create:
+      - ~/.config
 
 - link:
-    ~/.bashrc: shell/bash/.bashrc
-    ~/.bash_profile: shell/bash/.bash_profile
-    ~/.profile: shell/bash/.profile
-    #  ~/.zlogin: shell/zsh/.zlogin
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
     ~/.zsh_plugins: shell/zsh/.zsh_plugins
@@ -20,7 +16,6 @@
     ~/.gitignore_global: git/.gitignore_global
     ~/.gitattributes: git/.gitattributes
     ~/.config/micro: editors/micro
-    ~/.docker: apps/docker
-    
+
 - shell:
     - [test -f ~/.z || touch ~/.z, Created ~/.z file]
