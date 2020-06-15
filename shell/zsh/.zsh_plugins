@@ -1,0 +1,18 @@
+# Oh-my-zsh
+ohmyzsh/ohmyzsh path:lib
+
+# Oh-my-zsh Plugins
+robbyrussell/oh-my-zsh path:plugins/fzf
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/history
+robbyrussell/oh-my-zsh path:plugins/z
+
+# zsh-users Plugins
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-syntax-highlighting
+
+# Other Plugins
+
+# Themes
+denysdovhan/spaceship-prompt

@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- defaults:
+    link:
+      create: true
+      force: true
+
+- create:
+    - ~/.config
+#    - ~/.hushlogin
+
+- link:
+    ~/.dotly: os/mac/.dotly
+    ~/Library/Group Containers/group.com.docker/settings.json: mac/docker/settings.json
+
+- shell:
+    - [test -f ~/.hushlogin || touch ~/.hushlogin, Created ~/.hushlogin file]
