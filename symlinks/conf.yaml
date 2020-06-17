@@ -16,6 +16,7 @@
     ~/.gitignore_global: git/.gitignore_global
     ~/.gitattributes: git/.gitattributes
     ~/.config/micro: editors/micro
+    ~/.sdkman/etc/config: os/common/sdkman/config
 
 - shell:
     - [test -f ~/.z || touch ~/.z, Created ~/.z file]
