@@ -7,7 +7,7 @@
 
 - link:
     ~/.dotly: os/mac/.dotly
-    ~/.iterm2_shell_integration.zsh: os/mac/iTerm2/iterm2_shell_integration.zsh
+    ~/.iterm2_shell_integration.zsh: os/mac/iTerm2/.iterm2_shell_integration.zsh
 
 - shell:
     - [test -f ~/.hushlogin || touch ~/.hushlogin, Created ~/.hushlogin file]
