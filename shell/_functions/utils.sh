@@ -30,9 +30,9 @@ function i() {
 
 function c() {
   if [[ $# -eq 0 ]]; then
-    idea .;
+    code .;
   else
-    idea "$@";
+    code "$@";
   fi;
 }
 

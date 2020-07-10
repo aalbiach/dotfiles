@@ -1,5 +1,6 @@
 function cdd() {
-  cd "$(ls -d -- */ | fzf)" || echo "Invalid directory"
+#  cd "$(ls -d -- */ | fzf)" || echo "Invalid directory"
+  cd "$(ls -alF | grep '^d' | awk '{print $9}' | fzf)" || echo "Invalid directory"
 }
 
 function j() {
