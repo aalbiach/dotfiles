@@ -18,7 +18,7 @@ echo 'Brew apps imported!'
 
 ln -s "$(brew --prefix)/bin/gsha256sum" "$(brew --prefix)/bin/sha256sum"
 
-pip install -r "$DOTFILES_PATH/langs/python/requirements.txt"
+pip3 install -r "$DOTFILES_PATH/langs/python/requirements.txt"
 echo 'Python apps imported!'
 
 xargs -I_ npm install -g "_" <"$DOTFILES_PATH/langs/js/global_modules.txt"

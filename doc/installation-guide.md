@@ -22,7 +22,6 @@
   - Set streaming quality to very high
   - Disable automatic startup
 * Open iTerm
-  - Select load preferences from URL and use ~/.dotfiles/mac/iTerm. On the next prompt select "NOT copy"
+  - Select load preferences from URL and use ~/.dotfiles/os/mac/iTerm2. On the next prompt select "NOT copy"
 * Restart
-k
 * Execute `dot shell zsh reload_completions` and then `compinit`
