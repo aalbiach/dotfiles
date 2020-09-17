@@ -8,7 +8,7 @@
   - `chmod -R 700 ~/.gnupg`
 * Execute the dotfiles installer
 * Login in Google Chrome
-#* Go to `Preferences/Keyboard/Shortcuts` and disable everything
+* Go to `Preferences/Keyboard/Shortcuts` and disable everything
 * Go to `Preferences/General` and enable font smoothing (if retina display)
 * Open JetBrains Toolbox and login
   - Login
