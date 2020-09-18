@@ -53,8 +53,8 @@
     # https://git-scm.com/docs/git-update-index#_untracked_cache
     untrackedCache = true
 
-[commit]
-    gpgsign = true
+# [commit]
+#     gpgsign = true
 
 [gpg]
     program = gpg
@@ -119,4 +119,3 @@
 # use separate file for username / github token / etc
 [include]
     path = ~/.gitconfig.local
-
