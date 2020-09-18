@@ -409,14 +409,12 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.dotfiles/os/mac/iTerm2</string>
-	<key>NSNavLastUserSetHideExtensionButtonState</key>
-	<false/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{799, 448}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -458,18 +456,20 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame NSColorPanel</key>
-	<string>0 120 224 275 0 0 1440 877 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>928 555 799 448 0 0 2560 1417 </string>
+	<string>-1068 338 799 448 -1280 105 1280 777 </string>
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
-	<string>972 941 616 174 0 0 2560 1417 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>520 570 400 129 0 0 1440 877 </string>
+	<string>548 639 616 174 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>2330 381 620 392 0 0 1440 877 </string>
+	<string>346 288 620 392 0 0 1280 777 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 204 609 401 0 0 1680 1027 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>269 298 1016 512 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>223 284 1145 931 0 0 2560 1417 </string>
+	<string>384 462 886 553 0 0 1920 1057 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>32 0 1248 777 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1305,13 +1305,13 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>FiraCodeNerdFontComplete-Regular 13</string>
+			<string>FuraCodeNerdFontComplete-Regular 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Non-ASCII Ligatures</key>
 			<false/>
 			<key>Normal Font</key>
-			<string>FiraCodeNerdFontComplete-Regular 11</string>
+			<string>FuraCodeNerdFontComplete-Regular 11</string>
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1668,7 +1668,7 @@ Show Toolbelt</string>
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/mrjeffworker</string>
+			<string>/Users/alvaro</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -2505,11 +2505,11 @@ Show Toolbelt</string>
 			<key>Name</key>
 			<string>SSH</string>
 			<key>Non Ascii Font</key>
-			<string>FiraCodeNerdFontComplete-Regular 13</string>
+			<string>FuraCodeNerdFontComplete-Regular 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraCodeNerdFontComplete-Regular 11</string>
+			<string>FuraCodeNerdFontComplete-Regular 11</string>
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -2847,50 +2847,50 @@ Show Toolbelt</string>
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/mrjeffworker</string>
+			<string>/Users/alvaro</string>
 		</dict>
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.9</string>
-		<string>3.3.8</string>
+		<string>3.3.6</string>
 		<string>3.3.11</string>
+		<string>3.3.12</string>
+		<string>3.3.1</string>
+		<string>3.3.5</string>
 		<string>3.3.7</string>
+		<string>3.3.9</string>
+		<string>3.2.9</string>
+		<string>3.3.0</string>
+		<string>3.3.4</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
-		<string>FiraCode Nerd Font</string>
 		<string>Menlo</string>
-		<string>Monaco</string>
+		<string>FuraCode Nerd Font</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
-	<key>NoSyncFrame_SessionsPreferences</key>
-	<dict>
-		<key>screenFrame</key>
-		<string>{{0, 0}, {1440, 900}}</string>
-		<key>topLeft</key>
-		<string>{269, 595}</string>
-	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {2560, 1440}}</string>
+		<string>{{-1280, 105}, {1280, 800}}</string>
 		<key>topLeft</key>
-		<string>{991, 1177}</string>
+		<string>{-1126, 841}</string>
 	</dict>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>36389B4C-B332-4421-9EA5-07BFEE8CA2CC</string>
+	<string>A8CB235A-26F3-47E7-B06A-A07B68A6285B</string>
 	<key>NoSyncLastTipTime</key>
-	<real>609959887.79021204</real>
+	<real>613941448.71822906</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>73</integer>
+	<integer>32</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>597920561.49038899</real>
+	<real>586816209.55735505</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
 	<key>NoSyncPermissionToShowTip</key>
@@ -3414,6 +3414,14 @@ Show Toolbelt</string>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.terminalIconName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<false/>
 				<key>name</key>
 				<string>title</string>
@@ -3424,7 +3432,7 @@ Show Toolbelt</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>title</string>
+				<string>tmuxWindowTitle</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3432,7 +3440,7 @@ Show Toolbelt</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>tmuxWindowTitle</string>
+				<string>title</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3526,19 +3534,19 @@ Show Toolbelt</string>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.termid</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
 				<false/>
 				<key>name</key>
 				<string>iterm2</string>
 				<key>nonterminalContext</key>
 				<integer>4</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.path</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
@@ -3560,7 +3568,7 @@ Show Toolbelt</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.path</string>
+				<string>currentSession.pid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3568,7 +3576,7 @@ Show Toolbelt</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.pid</string>
+				<string>currentSession.terminalWindowName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3625,126 +3633,27 @@ Show Toolbelt</string>
 			</dict>
 		</array>
 	</dict>
-	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
-	<real>597601105.88710797</real>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>585340109.23966706</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
-		<string>0030</string>
-		<string>0023</string>
-		<string>0016</string>
-		<string>0009</string>
-		<string>0059</string>
-		<string>0066</string>
-		<string>0073</string>
-		<string>0002</string>
-		<string>0045</string>
-		<string>0038</string>
-		<string>0052</string>
-		<string>0017</string>
-		<string>0031</string>
-		<string>0024</string>
-		<string>0067</string>
-		<string>0074</string>
-		<string>0010</string>
-		<string>0046</string>
-		<string>0003</string>
-		<string>0039</string>
-		<string>0053</string>
-		<string>0060</string>
-		<string>0025</string>
-		<string>0018</string>
-		<string>0032</string>
-		<string>0068</string>
-		<string>0011</string>
-		<string>0047</string>
 		<string>0004</string>
-		<string>0054</string>
-		<string>0061</string>
-		<string>0033</string>
-		<string>0026</string>
-		<string>0019</string>
-		<string>0040</string>
-		<string>0069</string>
-		<string>0076</string>
-		<string>0012</string>
-		<string>0048</string>
-		<string>0005</string>
-		<string>0055</string>
-		<string>0062</string>
-		<string>0041</string>
-		<string>0034</string>
-		<string>0027</string>
-		<string>0077</string>
-		<string>0013</string>
-		<string>0049</string>
-		<string>0006</string>
-		<string>0020</string>
-		<string>0056</string>
-		<string>0063</string>
-		<string>0070</string>
-		<string>0042</string>
-		<string>0035</string>
-		<string>0028</string>
-		<string>0021</string>
-		<string>0014</string>
-		<string>0007</string>
-		<string>0057</string>
-		<string>0064</string>
-		<string>0071</string>
 		<string>0000</string>
-		<string>0029</string>
-		<string>0050</string>
-		<string>0043</string>
-		<string>0036</string>
-		<string>0022</string>
-		<string>0015</string>
-		<string>0008</string>
-		<string>0058</string>
-		<string>0065</string>
-		<string>0072</string>
-		<string>0001</string>
-		<string>0037</string>
+		<string>0010</string>
+		<string>0007</string>
+		<string>0003</string>
+		<string>0006</string>
+		<string>0002</string>
 		<string>000</string>
-		<string>0044</string>
-		<string>0051</string>
-		<string>0078</string>
+		<string>0009</string>
+		<string>0005</string>
+		<string>0001</string>
+		<string>0011</string>
+		<string>0008</string>
+		<string>0012</string>
 	</array>
-	<key>NoSyncToolbeltProportions</key>
-	<dict>
-		<key>proportions</key>
-		<array>
-			<dict>
-				<key>heightAsFraction</key>
-				<real>0.17953861584754263</real>
-				<key>name</key>
-				<string>Command History</string>
-			</dict>
-			<dict>
-				<key>heightAsFraction</key>
-				<real>0.13941825476429287</real>
-				<key>name</key>
-				<string>Jobs</string>
-			</dict>
-			<dict>
-				<key>heightAsFraction</key>
-				<real>0.13741223671013039</real>
-				<key>name</key>
-				<string>Paste History</string>
-			</dict>
-			<dict>
-				<key>heightAsFraction</key>
-				<real>0.17953861584754263</real>
-				<key>name</key>
-				<string>Profiles</string>
-			</dict>
-			<dict>
-				<key>heightAsFraction</key>
-				<real>0.3640922768304915</real>
-				<key>name</key>
-				<string>Recent Directories</string>
-			</dict>
-		</array>
-	</dict>
 	<key>OpenArrangementAtStartup</key>
 	<true/>
 	<key>OpenBookmark</key>
@@ -3787,7 +3696,7 @@ Show Toolbelt</string>
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/mrjeffworker/.dotfiles/os/mac/iTerm2</string>
+	<string>/Users/alvaro/.dotfiles/os/mac/iTerm2</string>
 	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
 	<false/>
 	<key>SUAutomaticallyUpdate</key>
@@ -3797,18 +3706,14 @@ Show Toolbelt</string>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final_new.xml?shard=95</string>
+	<string>https://iterm2.com/appcasts/final_new.xml?shard=25</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-06-18T16:09:09Z</date>
+	<date>2020-09-18T07:25:44Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
-	<key>SUUpdateGroupIdentifier</key>
-	<integer>1910243571</integer>
 	<key>SUUpdateRelaunchingMarker</key>
-	<false/>
-	<key>Secure Input</key>
 	<false/>
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
@@ -4907,7 +4812,7 @@ Show Toolbelt</string>
 											<key>Window Type</key>
 											<integer>0</integer>
 											<key>Working Directory</key>
-											<string>/Users/mrjeffworker</string>
+											<string>/Users/alvaro</string>
 										</dict>
 										<key>Columns</key>
 										<integer>181</integer>
@@ -4915,32 +4820,32 @@ Show Toolbelt</string>
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/mrjeffworker</string>
-											<string>/Users/mrjeffworker</string>
+											<string>/Users/alvaro</string>
+											<string>/Users/alvaro</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/mrjeffworker</string>
+											<string>/Users/alvaro</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict>
-											<key>mrjeffworker@MacBook-Pro-de-Alvaro-Albiach.local</key>
+											<key>alvaro@alvaro-macbook-pro.local</key>
 											<string>zsh</string>
 										</dict>
 										<key>Hosts</key>
 										<array>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 										</array>
 										<key>Is UTF-8</key>
@@ -4955,7 +4860,7 @@ Show Toolbelt</string>
 										<key>Program</key>
 										<dict>
 											<key>Command</key>
-											<string>login -fp "mrjeffworker"</string>
+											<string>login -fp "alvaro"</string>
 											<key>Type</key>
 											<string>Command</string>
 										</dict>
@@ -4972,7 +4877,7 @@ Show Toolbelt</string>
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/mrjeffworker</string>
+										<string>/Users/alvaro</string>
 										<key>Working Directory Poller Disabled</key>
 										<false/>
 									</dict>
@@ -6107,7 +6012,7 @@ Show Toolbelt</string>
 											<key>Window Type</key>
 											<integer>0</integer>
 											<key>Working Directory</key>
-											<string>/Users/mrjeffworker</string>
+											<string>/Users/alvaro</string>
 										</dict>
 										<key>Columns</key>
 										<integer>118</integer>
@@ -6133,217 +6038,217 @@ Show Toolbelt</string>
 										</array>
 										<key>Directories</key>
 										<array>
-											<string>/Users/mrjeffworker</string>
-											<string>/Users/mrjeffworker</string>
-											<string>/Users/mrjeffworker/Projects/mrjeff-backend-local-environment</string>
-											<string>/Users/mrjeffworker/Projects/mrjeff-backend-local-environment</string>
-											<string>/Users/mrjeffworker/Projects/mrjeff-backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/mrjeff-backend-local-environment/configserver</string>
+											<string>/Users/alvaro</string>
+											<string>/Users/alvaro</string>
+											<string>/Users/alvaro/Projects/mrjeff-backend-local-environment</string>
+											<string>/Users/alvaro/Projects/mrjeff-backend-local-environment</string>
+											<string>/Users/alvaro/Projects/mrjeff-backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/mrjeff-backend-local-environment/configserver</string>
 											<string>/</string>
 											<string>/</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/other/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/other/backend-local-environment/configserver</string>
 											<string>/</string>
 											<string>/</string>
 											<string>/</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/configserver</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/configserver</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/configserver</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/configserver</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict>
-											<key>mrjeffworker@MacBook-Pro-de-Alvaro-Albiach.local</key>
+											<key>alvaro@alvaro-macbook-pro.local</key>
 											<string>zsh</string>
 										</dict>
 										<key>Hosts</key>
 										<array>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 										</array>
 										<key>Is UTF-8</key>
@@ -6373,7 +6278,7 @@ Show Toolbelt</string>
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/configserver</string>
+										<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/configserver</string>
 										<key>Working Directory Poller Disabled</key>
 										<true/>
 									</dict>
@@ -7418,7 +7323,7 @@ Show Toolbelt</string>
 											<key>Window Type</key>
 											<integer>0</integer>
 											<key>Working Directory</key>
-											<string>/Users/mrjeffworker</string>
+											<string>/Users/alvaro</string>
 										</dict>
 										<key>Columns</key>
 										<integer>118</integer>
@@ -7439,181 +7344,181 @@ Show Toolbelt</string>
 										</array>
 										<key>Directories</key>
 										<array>
-											<string>/Users/mrjeffworker</string>
-											<string>/Users/mrjeffworker</string>
-											<string>/Users/mrjeffworker/Projects</string>
-											<string>/Users/mrjeffworker/Projects/mrjeff-backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/mrjeff-backend-local-environment/proxy</string>
+											<string>/Users/alvaro</string>
+											<string>/Users/alvaro</string>
+											<string>/Users/alvaro/Projects</string>
+											<string>/Users/alvaro/Projects/mrjeff-backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/mrjeff-backend-local-environment/proxy</string>
 											<string>/</string>
 											<string>/</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/other/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/other/backend-local-environment/proxy</string>
 											<string>/</string>
 											<string>/</string>
 											<string>/</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/proxy</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/proxy</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/proxy</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/proxy</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict>
-											<key>mrjeffworker@MacBook-Pro-de-Alvaro-Albiach.local</key>
+											<key>alvaro@alvaro-macbook-pro.local</key>
 											<string>zsh</string>
 										</dict>
 										<key>Hosts</key>
 										<array>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 										</array>
 										<key>Is UTF-8</key>
@@ -7643,7 +7548,7 @@ Show Toolbelt</string>
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/proxy</string>
+										<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/proxy</string>
 										<key>Working Directory Poller Disabled</key>
 										<true/>
 									</dict>
@@ -8688,7 +8593,7 @@ Show Toolbelt</string>
 											<key>Window Type</key>
 											<integer>0</integer>
 											<key>Working Directory</key>
-											<string>/Users/mrjeffworker</string>
+											<string>/Users/alvaro</string>
 										</dict>
 										<key>Columns</key>
 										<integer>118</integer>
@@ -8716,256 +8621,256 @@ Show Toolbelt</string>
 										</array>
 										<key>Directories</key>
 										<array>
-											<string>/Users/mrjeffworker</string>
-											<string>/Users/mrjeffworker</string>
-											<string>/Users/mrjeffworker/Projects/mrjeff-backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/mrjeff-backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/mrjeff-backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro</string>
+											<string>/Users/alvaro</string>
+											<string>/Users/alvaro/Projects/mrjeff-backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/mrjeff-backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/mrjeff-backend-local-environment/infrastructure</string>
 											<string>/</string>
 											<string>/</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/other/backend-local-environment/infrastructure</string>
 											<string>/</string>
 											<string>/</string>
 											<string>/</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+											<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict>
-											<key>mrjeffworker@MacBook-Pro-de-Alvaro-Albiach.local</key>
+											<key>alvaro@alvaro-macbook-pro.local</key>
 											<string>zsh</string>
 										</dict>
 										<key>Hosts</key>
 										<array>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 											<dict>
 												<key>Host name</key>
-												<string>MacBook-Pro-de-Alvaro-Albiach.local</string>
+												<string>alvaro-macbook-pro.local</string>
 												<key>User name</key>
-												<string>mrjeffworker</string>
+												<string>alvaro</string>
 											</dict>
 										</array>
 										<key>Is UTF-8</key>
@@ -8995,7 +8900,7 @@ Show Toolbelt</string>
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/mrjeffworker/Projects/Jeff/other/backend-local-environment/infrastructure</string>
+										<string>/Users/alvaro/Projects/Jeff/other/backend-local-environment/infrastructure</string>
 										<key>Working Directory Poller Disabled</key>
 										<true/>
 									</dict>
@@ -9084,6 +8989,6 @@ Show Toolbelt</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.11</string>
+	<string>3.3.12</string>
 </dict>
 </plist>
