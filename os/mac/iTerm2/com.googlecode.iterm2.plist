@@ -467,7 +467,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>269 298 1016 512 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>384 462 886 553 0 0 1920 1057 </string>
+	<string>1002 551 1293 834 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>32 0 1248 777 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -710,13 +710,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.10000000149011612</real>
+				<real>0.098039215686274508</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.10000000149011612</real>
+				<real>0.098039215686274508</real>
 				<key>Red Component</key>
-				<real>0.10000000149011612</real>
+				<real>0.098039215686274508</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -729,7 +729,7 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.1491314172744751</real>
+				<real>0.14901960784313725</real>
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
@@ -758,6 +758,8 @@
 			</dict>
 			<key>Bound Hosts</key>
 			<array/>
+			<key>Brighten Bold Text</key>
+			<true/>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
@@ -1333,26 +1335,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>1</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>1</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.47921031713485718</real>
+				<real>0.47058823529411764</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.51170200109481812</real>
+				<real>0.30980392156862746</real>
 				<key>Red Component</key>
-				<real>0.61658787727355957</real>
+				<real>0.19215686274509805</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
@@ -1661,6 +1663,10 @@ Show Toolbelt</string>
 			<true/>
 			<key>Use Non-ASCII Font</key>
 			<true/>
+			<key>Use Tab Color</key>
+			<false/>
+			<key>Use Underline Color</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -2873,9 +2879,9 @@ Show Toolbelt</string>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{-1280, 105}, {1280, 800}}</string>
+		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{-1126, 841}</string>
+		<string>{1208, 801}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
@@ -2884,7 +2890,7 @@ Show Toolbelt</string>
 	<key>NoSyncLastTipTime</key>
 	<real>613941448.71822906</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>32</integer>
+	<integer>44</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3325,14 +3331,6 @@ Show Toolbelt</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>number</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
 				<string>currentTab.currentSession.path</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -3349,7 +3347,7 @@ Show Toolbelt</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.hostname</string>
+				<string>number</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3357,7 +3355,7 @@ Show Toolbelt</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.titleOverrideFormat</string>
+				<string>currentTab.currentSession.hostname</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3699,6 +3697,8 @@ Show Toolbelt</string>
 	<string>/Users/alvaro/.dotfiles/os/mac/iTerm2</string>
 	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
 	<false/>
+	<key>PromptOnQuit</key>
+	<false/>
 	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -3710,7 +3710,7 @@ Show Toolbelt</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-09-18T07:25:44Z</date>
+	<date>2020-09-21T08:46:10Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -8990,5 +8990,9 @@ Show Toolbelt</string>
 	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.3.12</string>
+	<key>kCPKSelectionViewPreferredModeKey</key>
+	<integer>0</integer>
+	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
+	<false/>
 </dict>
 </plist>
