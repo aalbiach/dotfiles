@@ -1,1 +1,1 @@
-node-gyp
+firebase-tools

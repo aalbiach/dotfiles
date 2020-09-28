@@ -1,9 +1,5 @@
 # copy to ~/.ssh/config
 
-Host github.com
-  ControlMaster auto
-  ControlPersist 120
-
 Host *
   # Always use SSH2.
   Protocol 2
@@ -12,7 +8,7 @@ Host *
   # instead of always opening a new one. This leads to much
   # quicker connection times.
   ControlMaster auto
-  ControlPath ~/.ssh/control/%r@%h:%p
+  ControlPath ~/.ssh/control/ssh-%r@%h:%p
   ControlPersist 1800
 
   # also this stuff
@@ -20,3 +16,8 @@ Host *
   TCPKeepAlive yes
   ServerAliveInterval 20
   ServerAliveCountMax 10
+
+  AddKeysToAgent yes
+  IgnoreUnknown UseKeychain
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519

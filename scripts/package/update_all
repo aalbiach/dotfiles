@@ -36,6 +36,10 @@ echo '⚡️ System: Symlinks, Dotly...'
 dot self update
 
 echo ''
+echo '⌨️ Antibody'
+antibody update
+
+echo ''
 echo '📜 tldr'
 tldr --update
 

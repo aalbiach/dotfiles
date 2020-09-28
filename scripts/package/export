@@ -21,6 +21,3 @@ echo 'Python apps exported!'
 
 ls -1 /usr/local/lib/node_modules | grep -v npm >"$DOTFILES_PATH/langs/js/global_modules.txt"
 echo 'NPM apps exported!'
-
-yarn global list --depth=0 > "$DOTFILES_PATH/langs/yarn/global_modules.txt"
-echo 'YARN apps exported!'
