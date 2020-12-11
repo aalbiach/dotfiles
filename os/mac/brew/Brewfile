@@ -14,11 +14,13 @@ brew "libmpc"
 brew "gcc"
 brew "gettext"
 brew "git"
+brew "unbound"
 brew "gnupg"
 brew "go"
 brew "xz"
 brew "httpie"
 brew "hugo"
+brew "jq"
 brew "libusbmuxd"
 brew "libxml2"
 brew "mas"
@@ -54,11 +56,11 @@ cask "slack"
 cask "soda-player"
 cask "spotify"
 cask "suspicious-package"
+cask "transmission"
 cask "transmission-remote-gui"
 cask "vlc"
 cask "whatsapp"
-cask "zoomus"
 mas "Bitdefender Virus Scanner", id: 500154009
+mas "HP Smart", id: 1474276998
 mas "Magnet", id: 441258766
 mas "The Unarchiver", id: 425424353
-mas "Xcode", id: 497799835
