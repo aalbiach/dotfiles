@@ -1,4 +1,5 @@
-export PATH=$PATH:$HOME/bin:$DOTFILES_PATH/bin:$DOTLY_PATH/bin:/usr/local/opt/gettext/bin
+export PATH=$PATH:$HOME/bin:$DOTFILES_PATH/bin:$DOTLY_PATH/bin
+export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/usr/local/opt/gettext/bin
 export PATH=$PATH:/usr/local/sbin
 
