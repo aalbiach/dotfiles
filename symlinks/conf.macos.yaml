@@ -5,9 +5,16 @@
       create: true
       force: true
 
+- create:
+    - ~/.hushlogin
+
 - link:
     ~/.dotly: os/mac/.dotly
     ~/.iterm2_shell_integration.zsh: os/mac/iTerm2/.iterm2_shell_integration.zsh
-
-- shell:
-    - [test -f ~/.hushlogin || touch ~/.hushlogin, Created ~/.hushlogin file]
+    ~/bin/bash: /opt/local/bin/bash
+    ~/bin/date: /opt/local/bin/gdate
+    ~/bin/find: /usr/local/opt/findutils/bin/gfind
+    ~/bin/make: /usr/local/opt/make/libexec/gnubin/make
+    ~/bin/sed: /usr/local/opt/gnu-sed/libexec/gnubin/sed
+    ~/bin/touch: /opt/local/bin/gtouch
+    ~/bin/zsh: /opt/local/bin/zsh

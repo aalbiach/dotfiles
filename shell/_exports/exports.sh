@@ -1,8 +1,3 @@
-export PATH=$PATH:$HOME/bin:$DOTFILES_PATH/bin:$DOTLY_PATH/bin
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:/usr/local/opt/gettext/bin
-export PATH=$PATH:/usr/local/sbin
-
 # Set visual editor and default editor
 export VISUAL='code -w'
 export EDITOR='micro'
@@ -33,3 +28,22 @@ export GPG_TTY=$(tty);
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# ------------------------------------------------------------------------------
+# Path - The higher it is, the more priority it has
+# ------------------------------------------------------------------------------
+export path=(
+  "$HOME/bin"
+  "$DOTLY_PATH/bin"
+  "$DOTFILES_PATH/bin"
+  "$JAVA_HOME/bin"
+  "$HOME/.cargo/bin"
+  "/usr/local/opt/python/libexec/bin"
+  "/usr/local/bin"
+  "/usr/local/sbin"
+  "/usr/bin"
+  "/bin"
+  "/usr/sbin"
+  "/sbin"
+  "/opt/X11/bin"
+)
