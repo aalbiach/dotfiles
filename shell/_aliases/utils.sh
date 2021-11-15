@@ -7,7 +7,6 @@ alias k='kill -9'
 
 alias chmox='chmod -x'
 
-alias cask='brew cask' # i <3 u cask
 alias where=which # sometimes i forget
 alias brwe=brew  #typos
 

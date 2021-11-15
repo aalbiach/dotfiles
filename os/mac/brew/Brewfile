@@ -45,10 +45,12 @@ brew "zsh"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 brew "denisidoro/tools/docpars"
+cask "1clipboard"
 cask "adobe-acrobat-reader"
 cask "clean-me"
 cask "daisydisk"
 cask "deepl"
+cask "docker"
 cask "font-firacode-nerd-font"
 cask "glance"
 cask "google-drive"
@@ -59,6 +61,7 @@ cask "paragon-ntfs"
 cask "pocket-casts"
 cask "qlcolorcode"
 cask "qlmarkdown"
+cask "qlstephen"
 cask "quicklook-csv"
 cask "quicklook-json"
 cask "raspberry-pi-imager"
@@ -67,6 +70,7 @@ cask "suspicious-package"
 cask "transmission-remote-gui"
 cask "vlc"
 mas "Bitdefender Virus Scanner", id: 500154009
+mas "Hotspot Shield", id: 771076721
 mas "HP Smart", id: 1474276998
 mas "Magnet", id: 441258766
 mas "Sleep No More", id: 578878161
