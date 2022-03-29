@@ -6,11 +6,18 @@
       force: true
 
 - create:
-    - ~/.config
+    - $HOME/.z
+    - $DOTFILES_PATH/shell/bash/completions
+    - $DOTFILES_PATH/shell/bash/themes
+    - $HOME/.config
 
 - link:
+    ~/.bash_profile: shell/bash/.bash_profile
+    ~/.bashrc: shell/bash/.bashrc
+    ~/.zlogin: shell/zsh/.zlogin
     ~/.zshenv: shell/zsh/.zshenv
     ~/.zshrc: shell/zsh/.zshrc
+    ~/.inputrc: shell/.inputrc
     ~/.zsh_plugins: shell/zsh/.zsh_plugins
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
@@ -18,5 +25,5 @@
     ~/.config/micro: editors/micro
     ~/.sdkman/etc/config: os/common/sdkman/config
 
-- shell:
-    - [test -f ~/.z || touch ~/.z, Created ~/.z file]
+#- shell:
+#    - [test -f ~/.z || touch ~/.z, Created ~/.z file]

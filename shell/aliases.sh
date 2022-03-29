@@ -1,9 +1,48 @@
-alias zshconfig="micro ~/.zshrc"
-alias up="dot package update_all"
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# alias ..="cd .."
+# alias ...="cd ../.."
+# alias ll="ls -l"
+# alias la="ls -la"
+# alias ~="cd ~"
+alias dotfiles='cd $DOTFILES_PATH'
+
+# mv, rm, cp
+alias mv='mv -v'
+alias rm='rm -i -v'
+alias cp='cp -v'
+
+# Git
+# alias gaa="git add -A"
+# alias gc='$DOTLY_PATH/bin/dot git commit'
+# alias gca="git add --all && git commit --amend --no-edit"
+# alias gco="git checkout"
+# alias gd='$DOTLY_PATH/bin/dot git pretty-diff'
+# alias gs="git status -sb"
+# alias gf="git fetch --all -p"
+# alias gps="git push"
+# alias gpsf="git push --force"
+# alias gpl="git pull --rebase --autostash"
+# alias gb="git branch"
+# alias gl='$DOTLY_PATH/bin/dot git pretty-log'
+
+# Utils
 alias k='kill -9'
-# alias i.='(idea $PWD &>/dev/null &)'
-# alias c.='(code $PWD &>/dev/null &)'
-# alias o.='open .'
+alias i.='(idea $PWD &>/dev/null &)'
+alias c.='(code $PWD &>/dev/null &)'
+alias o.='open .'
+alias up='dot package update_all'
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+alias zshconfig="micro ~/.zshrc"
 
 alias chmox='chmod -x'
 

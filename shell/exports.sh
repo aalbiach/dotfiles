@@ -21,6 +21,16 @@ export GPG_TTY=$(tty);
 # command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
 # eval "$(gdircolors -b ~/.dircolors)"
 
+# ------------------------------------------------------------------------------
+# Languages
+# ------------------------------------------------------------------------------
+# export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
+# export GEM_HOME="$HOME/.gem"
+# export GOPATH="$HOME/.go"
+
+# ------------------------------------------------------------------------------
+# Apps
+# ------------------------------------------------------------------------------
 # iTerm2 Shell Integration
 [[ -s "$HOME/.iterm2_shell_integration.zsh" ]] && source "$HOME/.iterm2_shell_integration.zsh"
 
@@ -37,14 +47,16 @@ export path=(
   "$DOTLY_PATH/bin"
   "$DOTFILES_PATH/bin"
   "$JAVA_HOME/bin"
-  "$HOME/.cargo/bin"
-  "/opt/homebrew/bin"
+#  "$GEM_HOME/bin"
+#  "$GOPATH/bin"
+#  "$HOME/.cargo/bin"
+  "/usr/local/opt/ruby/bin"
   "/usr/local/opt/python/libexec/bin"
+  "/opt/homebrew/bin"
   "/usr/local/bin"
   "/usr/local/sbin"
   "/usr/bin"
-  "/bin"
   "/usr/sbin"
+  "/bin"
   "/sbin"
-  "/opt/X11/bin"
 )

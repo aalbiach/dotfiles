@@ -6,15 +6,15 @@
       force: true
 
 - create:
-    - ~/.hushlogin
+    - $HOME/.hushlogin
 
 - link:
     ~/.dotly: os/mac/.dotly
     ~/.iterm2_shell_integration.zsh: os/mac/iTerm2/.iterm2_shell_integration.zsh
-    ~/bin/bash: /opt/local/bin/bash
-    ~/bin/date: /opt/local/bin/gdate
-    ~/bin/find: /usr/local/opt/findutils/bin/gfind
-    ~/bin/make: /usr/local/opt/make/libexec/gnubin/make
-    ~/bin/sed: /usr/local/opt/gnu-sed/libexec/gnubin/sed
-    ~/bin/touch: /opt/local/bin/gtouch
-    ~/bin/zsh: /opt/local/bin/zsh
+    ~/bin/bash: /opt/homebrew/bin/bash
+    ~/bin/date: /opt/homebrew/bin/gdate
+    ~/bin/find: /opt/homebrew/bin/gfind
+    ~/bin/make: /opt/homebrew/bin/gmake
+    ~/bin/sed: /opt/homebrew/bin/gsed
+    ~/bin/touch: /opt/homebrew/bin/gtouch
+    ~/bin/zsh: /opt/homebrew/bin/zsh

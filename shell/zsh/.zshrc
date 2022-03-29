@@ -1,4 +1,5 @@
-# Uncomment for debuf with `zprof`
+#!/usr/bin/env zsh
+# Uncomment for debug with `zprof`
 # zmodload zsh/zprof
 
 setopt HIST_IGNORE_ALL_DUPS
