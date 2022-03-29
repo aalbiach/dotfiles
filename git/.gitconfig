@@ -25,7 +25,7 @@
     dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
     # Show the user email for the current repository.
-    whoami = config user.email
+    whoami = config --includes --show-scope --get-regexp user
 
 [apply]
     # Detect whitespace errors when applying a patch
