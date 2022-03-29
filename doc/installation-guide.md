@@ -9,7 +9,6 @@
   * `chmod -R 700 ~/.gnupg`
 * Execute the dotfiles installer
 * Login in Google Chrome
-* Go to `Preferences/Keyboard/Shortcuts` and disable everything
 * Go to `Preferences/General` and enable font smoothing (if retina display)
 * Open JetBrains Toolbox and login
   * Login
@@ -28,9 +27,7 @@
   * Enable it
 * Open Suspicious Package
   * Enable it
-* Open Dashlane
-  * Login
-* Open Google Backup and Sync
+* Open Google Drive
   * Login
 * Open Notion
   * Login
@@ -38,7 +35,7 @@
   * Login
 * Open Daisy Disk
   * Login
-* Open NTFS for Mac
+* Open Paragon NTFS
   * Login
 * Open Logi Options
   * Login
