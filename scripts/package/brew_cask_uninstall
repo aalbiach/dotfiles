@@ -12,10 +12,10 @@ source "$DOTLY_PATH/scripts/core/_main.sh"
 
 docs::parse "$@"
 
-if [[ -z $1 ]]; then
-  to_uninstall=$(brew list --cask | fzf)
-else
+if [[ $# -gt 0 ]]; then
   to_uninstall=$(brew list --cask | grep $1 | fzf)
+else
+  to_uninstall=$(brew list --cask | fzf)
 fi
 
 if [[ -z ${to_uninstall} ]]; then

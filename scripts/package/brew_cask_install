@@ -12,10 +12,10 @@ source "$DOTLY_PATH/scripts/core/_main.sh"
 
 docs::parse "$@"
 
-if [[ -z $1 ]]; then
-  package=$(brew search --cask | fzf)
-else
+if [[ $# -gt 0 ]]; then
   package=$(brew search --cask | grep $1 | fzf)
+else
+  package=$(brew search --cask | fzf)
 fi
 
 if [[ -z ${package} ]]; then
