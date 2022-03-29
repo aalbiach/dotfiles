@@ -413,7 +413,7 @@ Show Toolbelt</string>
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<true/>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -1214,11 +1214,11 @@ Show Toolbelt</string>
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>FuraCodeNerdFontComplete-Regular 12</string>
+			<string>JetBrainsMonoNerdFontComplete-Regular 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FuraCodeNerdFontComplete-Medium 12</string>
+			<string>JetBrainsMonoNerdFontComplete-Regular 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Open Toolbelt</key>
@@ -1593,7 +1593,7 @@ Show Toolbelt</string>
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/alvaro</string>
+			<string>/Users/alvaro.albiach</string>
 		</dict>
 	</array>
 	<key>OpenArrangementAtStartup</key>
