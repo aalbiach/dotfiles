@@ -4,7 +4,7 @@ set -euo pipefail
 
 source "$DOTLY_PATH/scripts/core/_main.sh"
 
-##? Install brew cask package
+##? Install brew package --cask
 #?? 1.0.0
 ##?
 ##? Usage:
@@ -24,4 +24,4 @@ if [[ -z ${package} ]]; then
   exit 1
 fi
 
-brew cask install ${package}
+brew install ${package} --cask

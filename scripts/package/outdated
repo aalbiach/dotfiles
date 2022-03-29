@@ -12,14 +12,14 @@ source "$DOTLY_PATH/scripts/core/_main.sh"
 
 docs::parse "$@"
 
-echo '♢ Outdated App Store apps:'
+echo '🍎 Outdated App Store apps:'
 mas outdated
 
 echo ''
-echo '♢ Outdated brew apps:'
+echo '🍺 Outdated brew apps:'
 brew update >/dev/null
 brew outdated
 
 echo ''
-echo '♢ Outdated brew cask apps:'
-brew cask outdated | grep -v real-vnc
+echo '🍻 Outdated brew cask apps:'
+brew outdated --cask | grep -v real-vnc

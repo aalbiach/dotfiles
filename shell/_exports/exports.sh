@@ -38,6 +38,7 @@ export path=(
   "$DOTFILES_PATH/bin"
   "$JAVA_HOME/bin"
   "$HOME/.cargo/bin"
+  "/opt/homebrew/bin"
   "/usr/local/opt/python/libexec/bin"
   "/usr/local/bin"
   "/usr/local/sbin"
