@@ -4,18 +4,18 @@ set -euo pipefail
 
 source "$DOTLY_PATH/scripts/core/_main.sh"
 
-##? Uninstall brew package --cask
+##? Uninstall a paclage
 #?? 1.0.0
 ##?
 ##? Usage:
-##?    uninstall_cask
+##?    brew_uninstall
 
 docs::parse "$@"
 
 if [[ $# -gt 0 ]]; then
-  to_uninstall=$(brew list --cask | grep $1 | fzf)
+  to_uninstall=$(brew leaves | grep "$1" | fzf)
 else
-  to_uninstall=$(brew list --cask | fzf)
+  to_uninstall=$(brew leaves | fzf)
 fi
 
 if [[ -z ${to_uninstall} ]]; then
@@ -24,4 +24,4 @@ if [[ -z ${to_uninstall} ]]; then
   exit 1
 fi
 
-brew uninstall ${to_uninstall} --cask
+brew uninstall "${to_uninstall}"

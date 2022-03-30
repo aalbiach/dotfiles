@@ -8,12 +8,12 @@ source "$DOTLY_PATH/scripts/core/_main.sh"
 #?? 1.0.0
 ##?
 ##? Usage:
-##?    install
+##?    brew_install
 
 docs::parse "$@"
 
 if [[ $# -gt 0 ]]; then
-  package=$(brew search | grep $1 | fzf)
+  package=$(brew search | grep "$1" | fzf)
 else
   package=$(brew search | fzf)
 fi
@@ -24,4 +24,4 @@ if [[ -z ${package} ]]; then
   exit 1
 fi
 
-brew install ${package}
+brew install "${package}"

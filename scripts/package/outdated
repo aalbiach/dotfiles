@@ -22,4 +22,4 @@ brew outdated
 
 echo ''
 echo '🍻 Outdated brew cask apps:'
-brew outdated --cask | grep -v real-vnc
+brew outdated --cask
