@@ -101,3 +101,7 @@ function c() {
 function nullify() {
   "$@" >/dev/null 2>&1
 }
+
+function hr() {
+  printf '%*s\n' "${1:-$COLUMNS}" | tr ' ' "${2:-#}"
+}
