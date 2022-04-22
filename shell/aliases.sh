@@ -10,7 +10,7 @@ alias dotfiles='cd $DOTFILES_PATH'
 
 # mv, rm, cp
 alias mv='mv -v'
-alias rm='rm -i -v'
+alias rm='rm -i'
 alias cp='cp -v'
 
 # Git
