@@ -2,32 +2,93 @@
 # Uncomment for debug with `zprof`
 # zmodload zsh/zprof
 
+# ZSH Ops
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FCNTL_LOCK
+setopt +o nomatch
 # setopt autopushd
+setopt HIST_REDUCE_BLANKS   # remove superfluous blanks from history items
+setopt INC_APPEND_HISTORY   # save history entries as soon as they are entered
+setopt SHARE_HISTORY        # share history between different instances of the shell
+setopt AUTO_CD              # cd by typing directory name if it's not a command
+setopt CORRECT_ALL          # autocorrect commands
+setopt AUTO_LIST            # automatically list choices on ambiguous completion
+setopt AUTO_MENU            # automatically use menu completion
+setopt ALWAYS_TO_END        # move cursor to end if word had one match
+
+#ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 # Async mode for autocompletion
-ZSH_AUTOSUGGEST_USE_ASYNC=true
-ZSH_HIGHLIGHT_MAXLENGTH=300
+#ZSH_AUTOSUGGEST_USE_ASYNC=true
+#ZSH_HIGHLIGHT_MAXLENGTH=300
+ZSH_THEME="spaceship"
+
+# History config
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
 
 source "$DOTFILES_PATH/shell/init.sh"
 
-# Check completions before start Antibody
+fpath=(
+  "$DOTFILES_PATH/shell/zsh/themes"
+  "$DOTFILES_PATH/shell/zsh/completions"
+#  "$DOTLY_PATH/shell/zsh/themes"
+  "$DOTLY_PATH/shell/zsh/completions"
+  "$(brew --prefix)/share/zsh/site-functions"
+  $fpath
+)
+
+# Load all stock functions (from $fpath files) called below.
+autoload -U compaudit
 autoload -Uz compinit
-typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
-if [ $(date +'%j') != $updated_at ]; then
-  compinit -i
+
+local zcd="${ZDOTDIR:-$HOME}/.zcompdump"  # zcompdump
+local zcdc=$zcd.zwc                       # compiled zcompdump
+local zcdl=$zcd.lock                      # lock file
+
+local attempts=30
+while (( attempts-- > 0 )) && ! ln $zcd $zcdl 2> /dev/null; do sleep 0.1; done
+rm -f $zcdl
+
+typeset -i updated_at=$(date +'%j' -r $zcd 2>/dev/null || stat -f '%Sm' -t '%j' $zcd 2>/dev/null)
+if [[ ! -e $zcd || $(date +'%j') != $updated_at ]]; then
+  if [[ $ZSH_DISABLE_COMPFIX == 'true' ]]; then
+    compinit -C -u -d $zcd
+  else
+    compinit -u -d $zcd
+  fi
 else
-  compinit -C -i
+  if [[ $ZSH_DISABLE_COMPFIX == 'true' ]]; then
+    compinit -C -i -d $zcd
+  else
+    compinit -i -d $zcd
+  fi
 fi
+
+# Execute code in the background to not affect the current session
+{
+  # Compile zcompdump, if modified, to increase startup speed.
+  if [[ -s $zcd && (! -s $zcdc || $zcd -nt $zcdc) ]]; then
+    rm -f $zcdc
+    zcompile $zcd
+  fi
+} &!
+
+# Enhanced form of menu completion called `menu selection'
+zmodload -i zsh/complist
+
+source "$DOTLY_PATH/shell/zsh/bindings/dot.zsh"
+source "$DOTLY_PATH/shell/zsh/bindings/reverse_search.zsh"
+source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
 
 # Start Antibody
 source <(antibody init)
-antibody bundle < $DOTFILES_PATH/shell/zsh/.zsh_plugins
+antibody bundle < "$DOTFILES_PATH/shell/zsh/.zsh_plugins"
 
-ZSH_THEME="spaceship"
+autoload -U promptinit && promptinit
 
-source "$DOTFILES_PATH/shell/zsh/themes/$ZSH_THEME/conf.sh"
+#source "$DOTFILES_PATH/shell/zsh/themes/$ZSH_THEME/conf.sh"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
