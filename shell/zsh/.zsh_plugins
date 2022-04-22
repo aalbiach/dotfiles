@@ -2,10 +2,10 @@
 ohmyzsh/ohmyzsh path:lib
 
 # Oh-my-zsh Plugins
-robbyrussell/oh-my-zsh path:plugins/fzf
-robbyrussell/oh-my-zsh path:plugins/git
-robbyrussell/oh-my-zsh path:plugins/history
-robbyrussell/oh-my-zsh path:plugins/z
+ohmyzsh/ohmyzsh path:plugins/fzf
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/history
+ohmyzsh/ohmyzsh path:plugins/z
 
 # zsh-users Plugins
 zsh-users/zsh-autosuggestions
