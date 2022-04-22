@@ -31,13 +31,6 @@ export GPG_TTY=$(tty);
 # ------------------------------------------------------------------------------
 # Apps
 # ------------------------------------------------------------------------------
-# iTerm2 Shell Integration
-[[ -s "$HOME/.iterm2_shell_integration.zsh" ]] && source "$HOME/.iterm2_shell_integration.zsh"
-
-# SDKMAN
-# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
