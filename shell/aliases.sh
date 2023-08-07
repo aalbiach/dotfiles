@@ -10,7 +10,7 @@ alias dotfiles='cd $DOTFILES_PATH'
 
 # mv, rm, cp
 alias mv='mv -v'
-alias rm='rm -i'
+alias rm='rm -I'
 alias cp='cp -v'
 
 # Git
@@ -32,7 +32,7 @@ alias k='kill -9'
 alias i.='(idea $PWD &>/dev/null &)'
 alias c.='(code $PWD &>/dev/null &)'
 alias o.='open .'
-alias up='dot package update_all_back'
+alias up='dot package update_all'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
@@ -59,11 +59,11 @@ alias fs="stat -f \"%z bytes\""
 # Also, clear Apple’s System Logs to improve shell startup speed.
 # Finally, clear download history from quarantine. https://mths.be/bum
 alias emptytrash=" \
-    sudo rm -rfv /Volumes/*/.Trashes; \
-    rm -rfv ~/.Trash/*; \
-    sudo rm -v /private/var/vm/sleepimage; \
-    sudo rm -rfv /private/var/log/asl/*.asl; \
-    sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent' \
+		sudo rm -rfv /Volumes/*/.Trashes; \
+		rm -rfv ~/.Trash/*; \
+		sudo rm -v /private/var/vm/sleepimage; \
+		sudo rm -rfv /private/var/log/asl/*.asl; \
+		sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent' \
 "
 
 # Update installed Ruby gems, Homebrew, npm, and their installed packages
@@ -103,3 +103,13 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+
+# GCloud CLI
+alias gcl='gcloud auth login'
+alias gcadl='gcloud auth application-default login'
+
+alias rent-staging='gcloud config configurations activate rent-staging'
+alias rent-prod='gcloud config configurations activate rent-production'
+alias creds-staging='gcloud container clusters get-credentials dev-01 --zone=europe-west4'
+alias creds-prod='gcloud container clusters get-credentials prod-01 --zone=europe-west4'
