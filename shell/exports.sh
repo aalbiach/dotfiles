@@ -27,16 +27,20 @@ export GPG_TTY=$(tty);
 export SPACESHIP_CONFIG="${DOTFILES_PATH}/shell/zsh/themes/spaceship/conf.zsh"
 export JQ_COLORS="0;33:0;35:0;35:0;35:0;32:0;31:0;37"
 
+fzf_colors="pointer:#ebdbb2,bg+:#3c3836,fg:#ebdbb2,fg+:#fbf1c7,hl:#8ec07c,info:#928374,header:#fb4934"
+export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
+
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
-#export path=(
-##  "$HOME/bin"
-#  "$DOTLY_PATH/bin"
-#  "$DOTFILES_PATH/bin"
-#  "/usr/local/opt/ruby/bin"
-#  "/usr/local/opt/python/libexec/bin"
-#  "/opt/homebrew/bin"
-#  "/opt/homebrew/sbin"
-#  "$PATH"
+#path=(
+# "$HOME/bin"
+# "$DOTLY_PATH/bin"
+# "$DOTFILES_PATH/bin"
+# "/usr/local/opt/ruby/bin"
+# "/usr/local/opt/python/libexec/bin"
+# "/opt/homebrew/bin"
+# "$path"
 #)
+
+#export path

@@ -5,7 +5,7 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 	zmodload zsh/zprof
 
 	# ZSH Ops
-	setopt HIST_IGNORE_ALL_DUPS
+	setopt HIST_IGNORE_ALL_DUPS # remove older duplicate entries from history
 	setopt HIST_FCNTL_LOCK
 	setopt +o nomatch
 	# setopt autopushd
@@ -83,6 +83,7 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 	source "$DOTLY_PATH/shell/zsh/bindings/dot.zsh"
 	source "$DOTLY_PATH/shell/zsh/bindings/reverse_search.zsh"
 	source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
+
 
 	# Start Antibody
 	source <(antibody init)
