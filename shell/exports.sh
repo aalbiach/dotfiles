@@ -22,35 +22,21 @@ export GPG_TTY=$(tty);
 # eval "$(gdircolors -b ~/.dircolors)"
 
 # ------------------------------------------------------------------------------
-# Languages
-# ------------------------------------------------------------------------------
-# export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
-# export GEM_HOME="$HOME/.gem"
-# export GOPATH="$HOME/.go"
-
-# ------------------------------------------------------------------------------
 # Apps
 # ------------------------------------------------------------------------------
+export SPACESHIP_CONFIG="${DOTFILES_PATH}/shell/zsh/themes/spaceship/conf.zsh"
+export JQ_COLORS="0;33:0;35:0;35:0;35:0;32:0;31:0;37"
 
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
-export path=(
-  "$HOME/bin"
-  "$DOTLY_PATH/bin"
-  "$DOTFILES_PATH/bin"
-  "$JAVA_HOME/bin"
-#  "$GEM_HOME/bin"
-#  "$GOPATH/bin"
-#  "$HOME/.cargo/bin"
-  "/usr/local/opt/ruby/bin"
-  "/usr/local/opt/python/libexec/bin"
-  "/opt/homebrew/bin"
-  "/opt/homebrew/sbin"
-  "/usr/local/bin"
-  "/usr/local/sbin"
-  "/usr/bin"
-  "/usr/sbin"
-  "/bin"
-  "/sbin"
-)
+#export path=(
+##  "$HOME/bin"
+#  "$DOTLY_PATH/bin"
+#  "$DOTFILES_PATH/bin"
+#  "/usr/local/opt/ruby/bin"
+#  "/usr/local/opt/python/libexec/bin"
+#  "/opt/homebrew/bin"
+#  "/opt/homebrew/sbin"
+#  "$PATH"
+#)
