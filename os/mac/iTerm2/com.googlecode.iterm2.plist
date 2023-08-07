@@ -1236,11 +1236,11 @@ Show Toolbelt</string>
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>JetBrainsMonoNerdFontComplete-Regular 12</string>
+			<string>Menlo-Regular 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>JetBrainsMonoNerdFontComplete-Regular 12</string>
+			<string>JetBrainsMonoNFM-Regular 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Open Toolbelt</key>
@@ -1286,7 +1286,7 @@ Show Toolbelt</string>
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>raw command</string>
+				<string>best editor</string>
 				<key>editor</key>
 				<string>com.github.atom</string>
 				<key>text</key>
