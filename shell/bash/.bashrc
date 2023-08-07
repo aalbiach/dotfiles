@@ -1,21 +1,13 @@
-export DOTFILES_PATH="XXX_DOTFILES_PATH_XXX"
-export DOTLY_PATH="$DOTFILES_PATH/modules/dotly"
-export DOTLY_THEME="codely"
+#!/usr/bin/env bash
 
 source "$DOTFILES_PATH/shell/init.sh"
-
-PATH=$(
-  IFS=":"
-  echo "${path[*]}"
-)
-export PATH
 
 themes_paths=(
   "$DOTFILES_PATH/shell/bash/themes"
   "$DOTLY_PATH/shell/bash/themes"
 )
 
-for THEME_PATH in ${themes_paths[@]}; do
+for THEME_PATH in "${themes_paths[@]}"; do
   THEME_PATH="${THEME_PATH}/$DOTLY_THEME.sh"
   [ -f "$THEME_PATH" ] && source "$THEME_PATH" && THEME_COMMAND="${PROMPT_COMMAND:-}" && break
 done
@@ -48,3 +40,9 @@ if [ -n "$(ls -A "$DOTFILES_PATH/shell/bash/completions/")" ]; then
     source "$bash_file"
   done
 fi
+
+# iTerm2 Shell Integration
+#test -e $HOME/.iterm2_shell_integration.zsh && source $HOME/.iterm2_shell_integration.zsh || true
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
