@@ -25,3 +25,5 @@ export XDG_CONFIG_HOME=$HOME/.config
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
 export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
+
+[[ -f "/opt/homebrew/opt/antidote/share/antidote/antidote.zsh" ]] && source "/opt/homebrew/opt/antidote/share/antidote/antidote.zsh"

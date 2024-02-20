@@ -71,10 +71,29 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 	source "$DOTLY_PATH/shell/zsh/bindings/reverse_search.zsh"
 	source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
 
+	# Start Antidote
+	source <(antidote init)
 
-	# Start Antibody
-	source <(antibody init)
-	antibody bundle < "$DOTFILES_PATH/shell/zsh/.zsh_plugins"
+	# Set the name of the static .zsh plugins file antidote will generate.
+	zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins.zsh
+
+	# Ensure you have a .zsh_plugins.txt file where you can add plugins.
+	[[ -f ${zsh_plugins:r}.txt ]] || touch ${zsh_plugins:r}.txt
+
+	# Lazy-load antidote.
+	fpath+=(${ZDOTDIR:-~}/.antidote)
+	autoload -Uz $fpath[-1]/
+
+	# Generate static file in a subshell when .zsh_plugins.txt is updated.
+	if [[ ! $zsh_plugins -nt ${zsh_plugins:r}.txt ]]; then
+		(
+			source "/opt/homebrew/opt/antidote/share/antidote/antidote.zsh"
+			antidote bundle <${zsh_plugins:r}.txt >|$zsh_plugins
+		)
+	fi
+
+	# Source your static plugins file.
+	source $zsh_plugins
 
 #  source "$DOTFILES_PATH/shell/zsh/themes/$ZSH_THEME/conf.zsh"
 

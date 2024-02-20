@@ -6,11 +6,12 @@ ohmyzsh/ohmyzsh path:plugins/fzf
 # ohmyzsh/ohmyzsh path:plugins/git
 ohmyzsh/ohmyzsh path:plugins/history
 ohmyzsh/ohmyzsh path:plugins/z
+ohmyzsh/ohmyzsh path:plugins/gcloud kind:defer
 
 # zsh-users Plugins
-zsh-users/zsh-autosuggestions
-zsh-users/zsh-completions
-zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-completions kind:defer
+zsh-users/zsh-syntax-highlighting kind:defer
 
 # Other Plugins
 
