@@ -110,5 +110,11 @@ alias gcadl='gcloud auth application-default login'
 
 alias rent-staging='gcloud config configurations activate rent-staging'
 alias rent-prod='gcloud config configurations activate rent-production'
-alias creds-staging='gcloud container clusters get-credentials dev-01 --zone=europe-west4 && kubectl config set-context --current --namespace=staging'
-alias creds-prod='gcloud container clusters get-credentials prod-01 --zone=europe-west4 && kubectl config set-context --current --namespace=production'
+alias creds-staging="gcloud container clusters get-credentials dev-01 \
+	--project rent-staging-xw6l \
+	--region europe-west4 \
+	&& kubectl config set-context --current --namespace=staging"
+alias creds-prod="gcloud container clusters get-credentials prod-01 \
+	--project rent-production-0j3m \
+	--region europe-west4 \
+	&& kubectl config set-context --current --namespace=production"

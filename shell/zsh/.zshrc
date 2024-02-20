@@ -32,50 +32,37 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 
 	source "$DOTFILES_PATH/shell/init.sh"
 
-	fpath=(
-		"$DOTFILES_PATH/shell/zsh/themes"
-		"$DOTFILES_PATH/shell/zsh/completions"
-	#  "$DOTLY_PATH/shell/zsh/themes"
-		"$DOTLY_PATH/shell/zsh/completions"
-		"$(brew --prefix)/share/zsh/site-functions"
-		$fpath
-	)
+#	fpath=(
+#		"$DOTFILES_PATH/shell/zsh/themes"
+#		"$DOTFILES_PATH/shell/zsh/completions"
+#	#  "$DOTLY_PATH/shell/zsh/themes"
+#		"$DOTLY_PATH/shell/zsh/completions"
+#		"$(brew --prefix)/share/zsh/site-functions"
+#		$fpath
+#	)
 
 	# Load all stock functions (from $fpath files) called below.
-	autoload -U compaudit
 	autoload -Uz compinit
 
 	local zcd="${ZDOTDIR:-$HOME}/.zcompdump"  # zcompdump
-	local zcdc=$zcd.zwc                       # compiled zcompdump
-	local zcdl=$zcd.lock                      # lock file
 
-	local attempts=30
-	while (( attempts-- > 0 )) && ! ln $zcd $zcdl 2> /dev/null; do sleep 0.1; done
-	rm -f $zcdl
+	() {
+		setopt extendedglob local_options
 
-	typeset -i updated_at=$(date +'%j' -r $zcd 2>/dev/null || stat -f '%Sm' -t '%j' $zcd 2>/dev/null)
-	if [[ ! -e $zcd || $(date +'%j') != $updated_at ]]; then
-		if [[ $ZSH_DISABLE_COMPFIX == 'true' ]]; then
-			compinit -C -u -d $zcd
-		else
-			compinit -u -d $zcd
+		if [[ -n $zcd(#qN.mh+24) ]]; then
+		 if [[ $ZSH_DISABLE_COMPFIX == 'true' ]]; then
+					compinit -C -u -d $zcd
+				else
+					compinit -u -d $zcd
+				fi
+			else
+				if [[ $ZSH_DISABLE_COMPFIX == 'true' ]]; then
+					compinit -C -i -d $zcd
+				else
+					compinit -i -d $zcd
+				fi
 		fi
-	else
-		if [[ $ZSH_DISABLE_COMPFIX == 'true' ]]; then
-			compinit -C -i -d $zcd
-		else
-			compinit -i -d $zcd
-		fi
-	fi
-
-	# Execute code in the background to not affect the current session
-	{
-		# Compile zcompdump, if modified, to increase startup speed.
-		if [[ -s $zcd && (! -s $zcdc || $zcd -nt $zcdc) ]]; then
-			rm -f $zcdc
-			zcompile $zcd
-		fi
-	} &!
+	}
 
 	# Enhanced form of menu completion called `menu selection'
 	zmodload -i zsh/complist
@@ -130,10 +117,8 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 	# HIST_STAMPS="mm/dd/yyyy"
 
 	# iTerm2 Shell Integration
-	test -e $HOME/.iterm2_shell_integration.zsh && source $HOME/.iterm2_shell_integration.zsh || true
+	[[ -f "$HOME/.iterm2_shell_integration.zsh" ]] && source "$HOME/.iterm2_shell_integration.zsh"
 
-	# SDKMAN
-	# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-	export SDKMAN_DIR="$HOME/.sdkman"
-	[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+	[[ -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" ]] && source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+	[[ -f "$(brew --prefix)/opt/liquibase/libexec/lib/liquibase_autocomplete_mac.bash" ]] && source "$(brew --prefix)/opt/liquibase/libexec/lib/liquibase_autocomplete.zsh"
 fi
