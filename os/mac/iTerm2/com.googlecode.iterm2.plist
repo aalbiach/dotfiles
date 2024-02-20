@@ -16,6 +16,8 @@ Show Toolbelt</string>
 			<integer>1</integer>
 		</dict>
 	</array>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AutoHideTmuxClientSession</key>
