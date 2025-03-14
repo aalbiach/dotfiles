@@ -5,8 +5,6 @@ export PATH="$DOTFILES_PATH/bin:$DOTLY_PATH/bin:$PATH"
 export PATH="$HOME/Library/Application\ Support/JetBrains/Toolbox/scripts:$PATH"
 export PATH="$HOME/bin:$PATH"
 
-[[ -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ]] && source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-
 # SDKMAN configuration
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

@@ -138,6 +138,5 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 	# iTerm2 Shell Integration
 	[[ -f "$HOME/.iterm2_shell_integration.zsh" ]] && source "$HOME/.iterm2_shell_integration.zsh"
 
-	[[ -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" ]] && source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 	[[ -f "$(brew --prefix)/opt/liquibase/libexec/lib/liquibase_autocomplete_mac.bash" ]] && source "$(brew --prefix)/opt/liquibase/libexec/lib/liquibase_autocomplete.zsh"
 fi
