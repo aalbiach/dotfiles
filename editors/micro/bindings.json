@@ -1,4 +1,10 @@
 {
     "Alt-/": "lua:comment.comment",
-    "CtrlUnderscore": "lua:comment.comment"
+    "CtrlP": "command:palettero",
+    "CtrlSpace": "command:palettero",
+    "CtrlUnderscore": "lua:comment.comment",
+    "F12": "command:tree",
+    "F5": "lua:wc.wordCount",
+    "F6": "command-edit:replace ",
+    "F7": "command-edit:replaceall "
 }

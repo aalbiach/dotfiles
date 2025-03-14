@@ -4,7 +4,6 @@
     "editorconfig": true,
     "eofnewline": false,
     "fastdirty": true,
-    "filemanager.openonstart": true,
     "hidehelp": false,
     "ignorecase": false,
     "matchbrace": false,
@@ -16,5 +15,6 @@
     ],
     "pluginrepos": [],
     "scrollbar": true,
+    "softwrap": true,
     "termtitle": false
 }
