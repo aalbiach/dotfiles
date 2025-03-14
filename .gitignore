@@ -1,8 +1,10 @@
 # Private Stuff
 /**/**/private-*
 **/editors/micro/buffers/history
+**/editors/micro/plug
 **/.zcompdump
 **/.zcompcache
 **/*.zwc
 **/*.zwc.old
+.zsh_sessions
 **/history
