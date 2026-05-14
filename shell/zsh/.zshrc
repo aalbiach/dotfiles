@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+# Set any helper functions used by your antidote config.
+function is-macos() {
+  [[ $OSTYPE == darwin* ]]
+}
+
 if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 	# Uncomment for debug with `zprof`
 	zmodload zsh/zprof
@@ -32,15 +37,6 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 
 	source "$DOTFILES_PATH/shell/init.sh"
 
-#	fpath=(
-#		"$DOTFILES_PATH/shell/zsh/themes"
-#		"$DOTFILES_PATH/shell/zsh/completions"
-#	#  "$DOTLY_PATH/shell/zsh/themes"
-#		"$DOTLY_PATH/shell/zsh/completions"
-#		"$(brew --prefix)/share/zsh/site-functions"
-#		$fpath
-#	)
-
 	# Load all stock functions (from $fpath files) called below.
 	autoload -Uz compinit
 
@@ -71,31 +67,32 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 	source "$DOTLY_PATH/shell/zsh/bindings/reverse_search.zsh"
 	source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
 
+	zstyle ':antidote:bundle' use-friendly-names 'yes'
+
 	# Start Antidote
-	source <(antidote init)
+	#	source <(antidote init)
 
 	# Set the name of the static .zsh plugins file antidote will generate.
-	zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins.zsh
+	zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
 
 	# Ensure you have a .zsh_plugins.txt file where you can add plugins.
-	[[ -f ${zsh_plugins:r}.txt ]] || touch ${zsh_plugins:r}.txt
+	[[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
+
+	# Lazy-load antidote from its functions directory.
+  fpath=("$(brew --prefix)/opt/antidote/share/antidote/functions" $fpath)
+  autoload -Uz antidote
+
+  # Generate a new static file whenever .zsh_plugins.txt is updated.
+  if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
+    antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
+  fi
 
 	# Lazy-load antidote.
 	fpath+=(${ZDOTDIR:-~}/.antidote)
-	autoload -Uz $fpath[-1]/
-
-	# Generate static file in a subshell when .zsh_plugins.txt is updated.
-	if [[ ! $zsh_plugins -nt ${zsh_plugins:r}.txt ]]; then
-		(
-			source "/opt/homebrew/opt/antidote/share/antidote/antidote.zsh"
-			antidote bundle <${zsh_plugins:r}.txt >|$zsh_plugins
-		)
-	fi
+	autoload -Uz antidote
 
 	# Source your static plugins file.
-	source $zsh_plugins
-
-#  source "$DOTFILES_PATH/shell/zsh/themes/$ZSH_THEME/conf.zsh"
+	source ${zsh_plugins}.zsh
 
 	autoload -U promptinit && promptinit
 
@@ -137,6 +134,12 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 
 	# iTerm2 Shell Integration
 	[[ -f "$HOME/.iterm2_shell_integration.zsh" ]] && source "$HOME/.iterm2_shell_integration.zsh"
-
-	[[ -f "$(brew --prefix)/opt/liquibase/libexec/lib/liquibase_autocomplete_mac.bash" ]] && source "$(brew --prefix)/opt/liquibase/libexec/lib/liquibase_autocomplete.zsh"
 fi
+
+# Added by Windsurf
+export PATH="/Users/alvaro.albiach/.codeium/windsurf/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/alvaro.albiach/.antigravity/antigravity/bin:$PATH"
+
+. "$HOME/.local/bin/env"

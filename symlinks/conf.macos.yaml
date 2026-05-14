@@ -1,12 +1,12 @@
-- clean: ['~']
+- clean: [ '~' ]
 
 - defaults:
     link:
       create: true
       force: true
 
-- create:
-    - $HOME/.hushlogin
+#- create:
+#    - $HOME/.hushlogin
 
 - link:
     ~/.dotly: os/mac/.dotly
@@ -18,3 +18,6 @@
     ~/bin/sed: /opt/homebrew/bin/gsed
     ~/bin/touch: /opt/homebrew/bin/gtouch
     ~/bin/zsh: /opt/homebrew/bin/zsh
+
+- shell:
+    - [ test -f ~/.hushlogin || touch ~/.hushlogin, Created ~/.hushlogin file ]

@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export PATH="$(cat "$HOME"/Library/Application\ Support/Garmin/ConnectIQ/current-sdk.cfg)/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="$DOTFILES_PATH/bin:$DOTLY_PATH/bin:$PATH"
 export PATH="$HOME/Library/Application\ Support/JetBrains/Toolbox/scripts:$PATH"
@@ -12,4 +14,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # remove duplicated entries from $PATH
 # zsh uses $path array along with $PATH
-typeset -U PATH path
+#typeset -U PATH path

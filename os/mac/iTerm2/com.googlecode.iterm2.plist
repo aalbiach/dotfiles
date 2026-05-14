@@ -6,6 +6,22 @@
 	<string>Return commands suitable for copy/pasting into \(shell) on \(uname). Do NOT include commentary NOR Markdown triple-backtick code blocks as your whole response will be copied into my terminal automatically.
 
 The script should do this: \(ai.prompt)</string>
+	<key>AIFeatureFunctionCalling</key>
+	<true/>
+	<key>AIFeatureHostedCodeInterpeter</key>
+	<false/>
+	<key>AIFeatureHostedFileSearch</key>
+	<false/>
+	<key>AIFeatureHostedWebSearch</key>
+	<false/>
+	<key>AIFeatureStreamingResponses</key>
+	<true/>
+	<key>AITermAPI</key>
+	<integer>3</integer>
+	<key>AIVectorStore</key>
+	<integer>0</integer>
+	<key>AIVendor</key>
+	<integer>1</integer>
 	<key>Actions</key>
 	<array>
 		<dict>
@@ -23,9 +39,11 @@ Show Toolbelt</string>
 	<key>AiMaxTokens</key>
 	<integer>1048576</integer>
 	<key>AiModel</key>
-	<string>Gemini 1.5 flash</string>
+	<string>gemini-2.0-flash</string>
+	<key>AiResponseMaxTokens</key>
+	<integer>8192</integer>
 	<key>AitermURL</key>
-	<string>https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent</string>
+	<string>https://generativelanguage.googleapis.com/v1beta/models/{{MODEL}}</string>
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>AlternateMouseScroll</key>
@@ -1755,7 +1773,7 @@ Show Toolbelt</string>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>ShowPaneTitles</key>

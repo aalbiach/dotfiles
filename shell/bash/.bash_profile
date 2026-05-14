@@ -6,3 +6,5 @@ export DOTLY_THEME="codely"
 export PATH="$HOME/bin:$DOTFILES_PATH/bin:$DOTLY_PATH/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 source "$HOME/.bashrc"
+
+. "$HOME/.local/bin/env"

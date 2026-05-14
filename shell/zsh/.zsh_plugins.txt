@@ -1,18 +1,36 @@
+# Themes
+denysdovhan/spaceship-prompt
+
+getantidote/use-omz
+zsh-users/zsh-completions path:src kind:fpath
+
 # Oh-my-zsh
 ohmyzsh/ohmyzsh path:lib
 
 # Oh-my-zsh Plugins
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/fzf
-# ohmyzsh/ohmyzsh path:plugins/git
 ohmyzsh/ohmyzsh path:plugins/history
-ohmyzsh/ohmyzsh path:plugins/z
+#ohmyzsh/ohmyzsh path:plugins/z
+#ohmyzsh/ohmyzsh path:plugins/extract
+
+# Programmer plugins
+#ohmyzsh/ohmyzsh path:plugins/git kind:defer
+ohmyzsh/ohmyzsh path:plugins/sdk kind:defer
+#ohmyzsh/ohmyzsh path:plugins/mvn kind:defer
+#ohmyzsh/ohmyzsh path:plugins/gradle kind:defer
+#ohmyzsh/ohmyzsh path:plugins/httpie kind:defer
+ohmyzsh/ohmyzsh path:plugins/node kind:defer
+ohmyzsh/ohmyzsh path:plugins/npm kind:defer
+
+# MacOS specific plugins
+ohmyzsh/ohmyzsh path:plugins/brew conditional:is-macos kind:defer
+ohmyzsh/ohmyzsh path:plugins/macos conditional:is-macos kind:defer
 
 # zsh-users Plugins
-zsh-users/zsh-autosuggestions kind:defer
-zsh-users/zsh-completions kind:defer
-zsh-users/zsh-syntax-highlighting kind:defer
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search
+#zsh-users/zsh-syntax-highlighting kind:defer
+zdharma-continuum/fast-syntax-highlighting kind:defer
 
 # Other Plugins
-
-# Themes
-denysdovhan/spaceship-prompt
