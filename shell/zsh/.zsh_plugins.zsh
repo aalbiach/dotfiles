@@ -1,9 +1,5 @@
-fpath+=( "$HOME/Library/Caches/antidote/denysdovhan/spaceship-prompt" )
-source "$HOME/Library/Caches/antidote/denysdovhan/spaceship-prompt/async.zsh"
-source "$HOME/Library/Caches/antidote/denysdovhan/spaceship-prompt/spaceship.zsh"
 fpath+=( "$HOME/Library/Caches/antidote/getantidote/use-omz" )
 source "$HOME/Library/Caches/antidote/getantidote/use-omz/use-omz.plugin.zsh"
-fpath+=( "$HOME/Library/Caches/antidote/zsh-users/zsh-completions/src" )
 fpath+=( "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/lib" )
 source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/lib/async_prompt.zsh"
 source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/lib/bzr.zsh"
@@ -32,16 +28,16 @@ fpath+=( "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/fzf" )
 source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/fzf/fzf.plugin.zsh"
 fpath+=( "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/history" )
 source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/history/history.plugin.zsh"
+fpath+=( "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/z" )
+source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/z/z.plugin.zsh"
 if ! (( $+functions[zsh-defer] )); then
   fpath+=( "$HOME/Library/Caches/antidote/romkatv/zsh-defer" )
   source "$HOME/Library/Caches/antidote/romkatv/zsh-defer/zsh-defer.plugin.zsh"
 fi
 fpath+=( "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/sdk" )
 zsh-defer source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/sdk/sdk.plugin.zsh"
-fpath+=( "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/node" )
-zsh-defer source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/node/node.plugin.zsh"
-fpath+=( "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/npm" )
-zsh-defer source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/npm/npm.plugin.zsh"
+fpath+=( "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/mvn" )
+zsh-defer source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/mvn/mvn.plugin.zsh"
 if is-macos; then
   fpath+=( "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/brew" )
   zsh-defer source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/brew/brew.plugin.zsh"
@@ -50,6 +46,7 @@ if is-macos; then
   fpath+=( "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/macos" )
   zsh-defer source "$HOME/Library/Caches/antidote/ohmyzsh/ohmyzsh/plugins/macos/macos.plugin.zsh"
 fi
+fpath+=( "$HOME/Library/Caches/antidote/zsh-users/zsh-completions/src" )
 fpath+=( "$HOME/Library/Caches/antidote/zsh-users/zsh-autosuggestions" )
 source "$HOME/Library/Caches/antidote/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
 fpath+=( "$HOME/Library/Caches/antidote/zsh-users/zsh-history-substring-search" )

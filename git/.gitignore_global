@@ -26,3 +26,5 @@ Thumbs.db
 
 # Custom
 *.no-commit.*
+
+**/.claude/settings.local.json
