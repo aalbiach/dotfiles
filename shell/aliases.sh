@@ -1,11 +1,34 @@
-# Enable aliases to be sudo’ed
+# Enable aliases to be sudo'ed; _ as a quick sudo shorthand
 alias sudo='sudo '
+alias _='sudo '
 
-# alias ..="cd .."
-# alias ...="cd ../.."
-# alias ll="ls -l"
-# alias la="ls -la"
-# alias ~="cd ~"
+# Directory navigation
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -- -='cd -'
+alias 1='cd -1'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
+alias md='mkdir -p'
+alias take=mkd
+
+# ls
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
+
+# grep with color
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
 alias dotfiles='cd $DOTFILES_PATH'
 
 # mv, rm, cp
@@ -46,6 +69,25 @@ alias zshconfig="micro ~/.zshrc"
 
 alias chmox='chmod -x'
 
+# History shortcuts
+alias h='history'
+alias hl='history | less'
+alias hs='history | grep'
+alias hsi='history | grep -i'
+
+# Maven (routes through the maven() wrapper which prefers ./mvnw)
+alias mvn='maven'
+alias mvnc='mvn clean'
+alias mvnci='mvn clean install'
+alias mvncist='mvn clean install -DskipTests'
+alias mvncp='mvn clean package'
+alias mvncpst='mvn clean package -DskipTests'
+alias mvnct='mvn clean test'
+alias mvncv='mvn clean verify'
+alias mvncvst='mvn clean verify -DskipTests'
+alias mvndp='mvn deploy'
+alias mvnboot='mvn spring-boot:run'
+
 alias where=which # sometimes i forget
 
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
@@ -55,7 +97,7 @@ alias fs="stat -f \"%z bytes\""
 
 # Empty the Trash on all mounted volumes and the main HDD.
 # Then clear the useless sleepimage
-# Also, clear Apple’s System Logs to improve shell startup speed.
+# Also, clear Apple's System Logs to improve shell startup speed.
 # Finally, clear download history from quarantine. https://mths.be/bum
 alias emptytrash=" \
 		sudo rm -rfv /Volumes/*/.Trashes; \

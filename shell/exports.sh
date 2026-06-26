@@ -17,7 +17,6 @@ export GPG_TTY=$(tty);
 # ------------------------------------------------------------------------------
 # Apps
 # ------------------------------------------------------------------------------
-export SPACESHIP_CONFIG="${DOTFILES_PATH}/shell/zsh/themes/spaceship/conf.zsh"
 export JQ_COLORS="0;33:0;35:0;35:0;35:0;32:0;31:0;37"
 
 fzf_colors="pointer:#ebdbb2,bg+:#3c3836,fg:#ebdbb2,fg+:#fbf1c7,hl:#8ec07c,info:#928374,header:#fb4934"

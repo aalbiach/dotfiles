@@ -1,16 +1,18 @@
 # ------------------------------------------------------------------------------
 # Directories
 # ------------------------------------------------------------------------------
-function cdd() {
-	cd "$(ls -d -- */ | fzf)" || echo "Invalid directory"
+
+# Show directory stack (cd -N to jump; requires AUTO_PUSHD setopt)
+function d() {
+	if [[ -n $1 ]]; then
+		dirs "$@"
+	else
+		dirs -v | head -n 10
+	fi
 }
 
-function j() {
-	fname=$(declare -f -F _z)
-
-	[ -n "$fname" ] || source "$DOTLY_PATH/modules/z/z.sh"
-
-	_z "$1"
+function cdd() {
+	cd "$(ls -d -- */ | fzf)" || echo "Invalid directory"
 }
 
 function recent_dirs() {
@@ -102,6 +104,47 @@ function nullify() {
 function hr() {
 	printf '%*s\n' "${1:-$COLUMNS}" | tr ' ' "${2:-#}"
 }
+
+# ------------------------------------------------------------------------------
+# macOS
+# ------------------------------------------------------------------------------
+
+# Open a new iTerm2 tab in the current directory
+function tab() {
+	osascript 2>/dev/null <<EOF
+tell application "iTerm"
+  tell current window
+    create tab with default profile
+    tell current session
+      write text "cd \"$PWD\""
+    end tell
+  end tell
+end tell
+EOF
+}
+
+# Print the path of the frontmost Finder window
+function pfd() {
+	osascript 2>/dev/null <<EOF
+tell application "Finder"
+  return POSIX path of (insertion location as alias)
+end tell
+EOF
+}
+
+# cd to the frontmost Finder window's directory
+function cdf() {
+	cd "$(pfd)" || return
+}
+
+# Remove .DS_Store files recursively (defaults to current dir)
+function rmdsstore() {
+	find "${@:-.}" -type f -name .DS_Store -delete
+}
+
+# ------------------------------------------------------------------------------
+# Build tools
+# ------------------------------------------------------------------------------
 
 function maven() {
 	if command -v ./mvnw &>/dev/null; then

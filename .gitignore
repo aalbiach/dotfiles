@@ -1,10 +1,12 @@
 # Private Stuff
 /**/**/private-*
+.zshenv.local
 **/editors/micro/buffers/history
 **/editors/micro/plug
 **/.zcompdump
 **/.zcompcache
 **/*.zwc
 **/*.zwc.old
+**/.zsh_plugins.zsh
 .zsh_sessions
 **/history

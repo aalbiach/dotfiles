@@ -2,26 +2,22 @@
 
 # Execute code in the background to not affect the current session
 (
-		# <https://github.com/zimfw/zimfw/blob/master/login_init.zsh>
-		setopt LOCAL_OPTIONS EXTENDED_GLOB
-		autoload -U zrecompile
-		local ZSHCONFIG="~/.zsh-config"
+	# <https://github.com/zimfw/zimfw/blob/master/login_init.zsh>
+	setopt LOCAL_OPTIONS EXTENDED_GLOB
+	autoload -U zrecompile
+	local zdotdir="${ZDOTDIR:-$HOME}"
 
-		# Compile zcompdump, if modified, to increase startup speed.
-		zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
-		if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
-				zrecompile -pq "$zcompdump"
-		fi
+	# Compile zcompdump, if modified, to increase startup speed.
+	local zcompdump="$zdotdir/.zcompdump"
+	if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
+		zrecompile -pq "$zcompdump"
+	fi
 
-		# zcompile .zshrc
-		zrecompile -pq ${ZDOTDIR:-${HOME}}/.zshrc
-		zrecompile -pq ${ZDOTDIR:-${HOME}}/.zprofile
-		zrecompile -pq ${ZDOTDIR:-${HOME}}/.zshenv
-		# recompile all zsh or sh
-		for f in $ZSHCONFIG/**/*.*sh
-		do
-				zrecompile -pq $f
-		done
+	# Compile config files and the antidote-generated plugins file.
+	zrecompile -pq "$zdotdir/.zshrc"
+	zrecompile -pq "$zdotdir/.zshenv"
+	zrecompile -pq "$zdotdir/.zprofile"
+	zrecompile -pq "$zdotdir/.zsh_plugins.zsh"
 
-		rm -f ${ZDOTDIR:-${HOME}}/*.zwc.old
+	rm -f "$zdotdir"/*.zwc.old
 ) &!

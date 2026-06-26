@@ -8,3 +8,7 @@ export PATH="$HOME/bin:$DOTFILES_PATH/bin:$DOTLY_PATH/bin:/opt/homebrew/bin:/opt
 source "$HOME/.bashrc"
 
 . "$HOME/.local/bin/env"
+
+
+# Added by Antigravity CLI installer
+export PATH="$HOME/.local/bin:$PATH"
