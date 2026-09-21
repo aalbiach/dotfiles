@@ -1,75 +1,123 @@
-tap "atomicjar/tap"
+tap "atomicjar/tap", trusted: true
+tap "azure/kubelogin", "https://github.com/Azure/homebrew-kubelogin"
+tap "buildpacks/tap", trusted: true
 tap "denisidoro/tools"
-tap "fluxcd/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/services"
-tap "ohueter/tap"
+# Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
-brew "bash"
+# Mozilla CA certificate store
 brew "ca-certificates"
+# Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-brew "qemu"
+# Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# Command-line tool for getting & setting the default browser
+brew "defaultbrowser"
+# Tool for exploring each layer in a docker image
 brew "dive"
+# Pack, ship and run any application as a lightweight container
 brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
 brew "docker-buildx"
+# Isolated development environments using Docker
 brew "docker-compose"
+# Platform keystore credential helper for Docker
 brew "docker-credential-helper"
-brew "ffmpeg"
+# Collection of GNU find, xargs, and locate
 brew "findutils"
+# Command-line fuzzy finder written in Go
 brew "fzf"
-brew "gh"
+# Distributed revision control system
 brew "git"
+# GNU implementation of the famous stream editor
 brew "gnu-sed"
-brew "go"
+# Kubernetes package manager
 brew "helm"
-brew "httpie"
-brew "hugo"
+# Command-line benchmarking tool
 brew "hyperfine"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Cryptographic library based on the code from GnuPG
 brew "libgcrypt"
+# Postgres C API library
 brew "libpq"
-brew "liquibase"
+# Utility for directing compilation
 brew "make"
+# Mac App Store command-line interface
 brew "mas"
-brew "maven-completion"
+# Modern and intuitive terminal-based text editor
 brew "micro"
-brew "node"
-brew "python@3.10"
-brew "tldr"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node@22"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Generic machine emulator and virtualizer
+brew "qemu"
+# Safe, concurrent, practical language
+brew "rust"
+# Autoformat shell script source code
+brew "shfmt"
+# Official tldr client written in Rust
+brew "tlrc"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Executes a program periodically, showing output fullscreen
 brew "watch"
-brew "wget"
+# UNIX shell (command interpreter)
 brew "zsh"
+# Additional completion definitions for zsh
 brew "zsh-completions"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-brew "denisidoro/tools/docpars"
+# A Kubernetes credential (exec) plugin implementing azure authentication
+brew "azure/kubelogin/kubelogin", trusted: true
+# View, print, and comment on PDF documents
 cask "adobe-acrobat-reader"
+# Application uninstaller
 cask "appcleaner"
-cask "clean-me"
+# Chromium based browser
+cask "arc"
+# AI-powered translator
 cask "deepl"
+# Agentic IDE with AI agent command center
+cask "devin-desktop"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-montserrat"
-cask "glance"
-cask "google-cloud-sdk"
-cask "google-drive"
-cask "grammarly"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# JetBrains tools manager
 cask "jetbrains-toolbox"
+# Keyboard customiser
 cask "karabiner-elements"
-cask "microsoft-edge"
+# Deep clean, analyze, and optimize app
+cask "mole-app"
+# App to write, plan, collaborate, and get organised
 cask "notion"
+# Podcast platform
 cask "pocket-casts"
-cask "postman"
-cask "slack"
+# Music streaming service
 cask "spotify"
-cask "suspicious-package"
-cask "visual-studio-code"
-cask "zoom"
+# Quicklook extension for source files
+cask "syntax-highlight"
+# Rust-based terminal
+cask "warp"
+mas "Hotspot Shield", id: 771076721
+mas "HP", id: 1474276998
+mas "Jamf Trust", id: 1608041266
 mas "Magnet", id: 441258766
 mas "OneAuth", id: 1142928979
 mas "Pasta", id: 1438389787
+mas "The Unarchiver", id: 425424353
