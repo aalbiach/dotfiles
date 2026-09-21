@@ -42,16 +42,12 @@ brew "git"
 brew "gnu-sed"
 # Kubernetes package manager
 brew "helm"
-# Command-line benchmarking tool
-brew "hyperfine"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Cryptographic library based on the code from GnuPG
 brew "libgcrypt"
-# Postgres C API library
-brew "libpq"
 # Utility for directing compilation
 brew "make"
 # Mac App Store command-line interface
@@ -60,8 +56,6 @@ brew "mas"
 brew "micro"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node@22"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Generic machine emulator and virtualizer
 brew "qemu"
 # Safe, concurrent, practical language
@@ -72,8 +66,6 @@ brew "shfmt"
 brew "tlrc"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Executes a program periodically, showing output fullscreen
-brew "watch"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Additional completion definitions for zsh
