@@ -439,6 +439,10 @@ Show Toolbelt</string>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>NeverWarnAboutShortLivedSessions_4184CD2B-E98D-4D19-A64E-E7F79C5E1DE2</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_4184CD2B-E98D-4D19-A64E-E7F79C5E1DE2_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
