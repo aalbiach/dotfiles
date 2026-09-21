@@ -8,8 +8,13 @@ export PATH="$DOTFILES_PATH/bin:$DOTLY_PATH/bin:$PATH"
 export PATH="$HOME/Library/Application\ Support/JetBrains/Toolbox/scripts:$PATH"
 export PATH="$HOME/bin:$PATH"
 
-# SDKMAN — lazy-loaded on first `sdk` call to avoid ~1s startup cost
+# SDKMAN — candidates on PATH immediately; sdk command lazy-loaded on first use
 export SDKMAN_DIR="$HOME/.sdkman"
+for _sdk_bin in "$SDKMAN_DIR"/candidates/*/current/bin; do
+  [[ -d "$_sdk_bin" ]] && export PATH="$_sdk_bin:$PATH"
+done
+unset _sdk_bin
+
 sdk() {
   unfunction sdk
   [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"

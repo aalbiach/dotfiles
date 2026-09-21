@@ -92,3 +92,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Added by Antigravity IDE
 export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+# Added by Devin
+export PATH="/Users/alvaro.albiach/.codeium/windsurf/bin:$PATH"

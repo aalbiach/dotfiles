@@ -150,7 +150,7 @@ function maven() {
 	if command -v ./mvnw &>/dev/null; then
 		./mvnw "$@"
 	elif command -v mvn &>/dev/null; then
-		mvn "$@"
+		command mvn "$@"
 	else
 		echo "command not found: mvn"
 	fi
@@ -160,7 +160,7 @@ function gradle() {
 	if command -v ./gradlew &>/dev/null; then
 		./gradlew "$@"
 	elif command -v gradle &>/dev/null; then
-		gradle "$@"
+		command gradle "$@"
 	else
 		echo "command not found: gradle"
 	fi
