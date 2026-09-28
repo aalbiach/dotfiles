@@ -1,5 +1,6 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HOMEBREW_BUNDLE_FILE_PATH="${DOTFILES_PATH}/os/mac/brew/Brewfile"
+export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
 
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
