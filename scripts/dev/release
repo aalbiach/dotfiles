@@ -185,7 +185,7 @@ create_release_branch() {
         log::error "Failed to create branch ${branch_name}"
         exit 1
     fi
-    log::success "✓ Switched to branch ${branch_name}"
+    log::success "Switched to branch ${branch_name}"
 }
 
 # Get the name of the current git branch
@@ -207,14 +207,14 @@ commit_and_push_changes() {
         log::error "Failed to commit changes"
         exit 1
     fi
-    log::success "✓ Changes committed"
+    log::success "Changes committed"
 
     log::success "Pushing changes to origin/${current_branch}..."
     if ! git push origin "${current_branch}"; then
         log::error "Failed to push changes to origin/${current_branch}"
         exit 1
     fi
-    log::success "✓ Changes pushed to origin/${current_branch}"
+    log::success "Changes pushed to origin/${current_branch}"
 }
 
 # Create an Azure DevOps pull request (or reuse an active one) and print its URL
@@ -251,7 +251,7 @@ create_pull_request() {
         log::error "Failed to create pull request ${source_branch} -> ${target_branch}"
         exit 1
     fi
-    log::success "✓ Pull request created: ${pr_url}"
+    log::success "Pull request created: ${pr_url}"
     echo "${pr_url}"
 }
 
@@ -380,13 +380,13 @@ execute_release_workflow() {
       log::error "Failed to switch to branch ${RELEASE_BRANCH}"
       exit 1
     fi
-    log::success "✓ Switched to branch ${RELEASE_BRANCH}"
+    log::success "Switched to branch ${RELEASE_BRANCH}"
   else
     create_release_branch "${RELEASE_BRANCH}"
   fi
 
   set_version "${RELEASE_VERSION}"
-  log::success "✓ Version set to ${RELEASE_VERSION}"
+  log::success "Version set to ${RELEASE_VERSION}"
 
   commit_and_push_changes "chore: release version ${RELEASE_VERSION}" "[skip ci]"
 
@@ -431,7 +431,7 @@ execute_prerelease_workflow() {
         log::error "Failed to create branch ${RELEASE_BRANCH}"
         exit 1
       fi
-      log::success "✓ Switched to branch ${RELEASE_BRANCH}"
+      log::success "Switched to branch ${RELEASE_BRANCH}"
     elif [[ ${#release_branches[@]} -eq 1 ]]; then
       RELEASE_BRANCH="${release_branches[0]}"
       log::success "Found release branch: ${RELEASE_BRANCH}"
@@ -463,7 +463,7 @@ execute_prerelease_workflow() {
       log::error "Failed to switch to branch ${RELEASE_BRANCH}"
       exit 1
     fi
-    log::success "✓ Switched to branch ${RELEASE_BRANCH}"
+    log::success "Switched to branch ${RELEASE_BRANCH}"
   fi
 
   local CURRENT_VERSION
@@ -510,7 +510,7 @@ execute_prerelease_workflow() {
 
   log::success "Setting version to ${NEXT_SNAPSHOT_VERSION}..."
   set_version "${NEXT_SNAPSHOT_VERSION}"
-  log::success "✓ Version set to ${NEXT_SNAPSHOT_VERSION}"
+  log::success "Version set to ${NEXT_SNAPSHOT_VERSION}"
 
   commit_and_push_changes "chore: pre-release version ${NEXT_SNAPSHOT_VERSION}" "[skip ci]"
 
