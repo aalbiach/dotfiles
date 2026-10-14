@@ -78,12 +78,6 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 
 fi
 
-# Added by Windsurf
-export PATH="$HOME/.codeium/windsurf/bin:$PATH"
-
-# Added by Antigravity
-export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
-
 . "$HOME/.local/bin/env"
 
 
@@ -94,4 +88,4 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
 
 # Added by Devin
-export PATH="/Users/alvaro.albiach/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.codeium/windsurf/bin:$PATH"
