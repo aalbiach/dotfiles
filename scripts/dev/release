@@ -6,11 +6,13 @@ set -euo pipefail
 source "$DOTLY_PATH/scripts/core/_main.sh"
 
 ##? Release the Maven project interactively
-#?? 1.1.0
+#?? 1.2.0
 ##?
 ##? Automates the Maven release process. The script will check your git workspace,
 ##? and prompt you to choose between a Release or Pre-release workflow. It automatically
 ##? handles branching, version bumping (Major, Minor, Patch), and pushing to the remote.
+##? It also opens an Azure DevOps pull request from the release branch to 'main' (release)
+##? or to 'dev' (pre-release).
 ##?
 ##? Usage:
 ##?    release
@@ -19,6 +21,9 @@ docs::parse "$@"
 
 # Base branch to release from
 readonly BASE_BRANCH="dev"
+
+# Target branch for release pull requests
+readonly TARGET_BRANCH="main"
 
 # Cleanup function
 cleanup() {
@@ -191,13 +196,14 @@ get_current_branch() {
 # Commit and push changes to the current branch
 commit_and_push_changes() {
     local commit_message="${1}"
+    local description="${2:-}"
     local current_branch
     current_branch=$(get_current_branch)
 
     log::success "Committing changes..."
     git add pom.xml
 
-    if ! git commit -m "${commit_message}"; then
+    if ! git commit -m "${commit_message}" ${description:+-m "${description}"}; then
         log::error "Failed to commit changes"
         exit 1
     fi
@@ -211,10 +217,51 @@ commit_and_push_changes() {
     log::success "✓ Changes pushed to origin/${current_branch}"
 }
 
+# Create an Azure DevOps pull request (or reuse an active one) and print its URL
+create_pull_request() {
+    local source_branch="${1}"
+    local target_branch="${2}"
+    local title="${3}"
+    local description="${4:-}"
+    local url_query="join('', [repository.webUrl, '/pullrequest/', to_string(pullRequestId)])"
+    local pr_url
+
+    pr_url=$(az repos pr list \
+        --source-branch "${source_branch}" \
+        --target-branch "${target_branch}" \
+        --status active \
+        --detect true \
+        --query "[].${url_query} | [0]" \
+        -o tsv)
+    if [[ -n "${pr_url}" ]]; then
+        log::warning "An active pull request ${source_branch} -> ${target_branch} already exists."
+        echo "${pr_url}"
+        return 0
+    fi
+
+    log::success "Creating pull request ${source_branch} -> ${target_branch}..."
+    if ! pr_url=$(az repos pr create \
+        --source-branch "${source_branch}" \
+        --target-branch "${target_branch}" \
+        --title "${title}" \
+        ${description:+--description "${description}"} \
+        --detect true \
+        --query "${url_query}" \
+        -o tsv); then
+        log::error "Failed to create pull request ${source_branch} -> ${target_branch}"
+        exit 1
+    fi
+    log::success "✓ Pull request created: ${pr_url}"
+    echo "${pr_url}"
+}
+
 # Check for required commands
 check_requirements() {
     # Check for git
     script::depends_on "git"
+
+    # Check for Azure CLI (azure-devops extension is used to create pull requests)
+    script::depends_on "az"
 
     # Detect and set Maven command
     MAVEN_CMD=$(detect_maven_command)
@@ -341,7 +388,10 @@ execute_release_workflow() {
   set_version "${RELEASE_VERSION}"
   log::success "✓ Version set to ${RELEASE_VERSION}"
 
-  commit_and_push_changes "chore: release version ${RELEASE_VERSION}"
+  commit_and_push_changes "chore: release version ${RELEASE_VERSION}" "[skip ci]"
+
+  local PR_URL
+  PR_URL=$(create_pull_request "${RELEASE_BRANCH}" "${TARGET_BRANCH}" "chore: release version ${RELEASE_VERSION}")
 
   # Summary
   log::success ""
@@ -350,6 +400,7 @@ execute_release_workflow() {
   log::success "=========================================="
   log::success "Released version: ${RELEASE_VERSION}"
   log::success "Changes pushed to: origin/${RELEASE_BRANCH}"
+  log::success "Pull request:      ${PR_URL}"
   log::success "=========================================="
 }
 
@@ -461,7 +512,10 @@ execute_prerelease_workflow() {
   set_version "${NEXT_SNAPSHOT_VERSION}"
   log::success "✓ Version set to ${NEXT_SNAPSHOT_VERSION}"
 
-  commit_and_push_changes "chore: pre-release version ${NEXT_SNAPSHOT_VERSION}"
+  commit_and_push_changes "chore: pre-release version ${NEXT_SNAPSHOT_VERSION}" "[skip ci]"
+
+  local PR_URL
+  PR_URL=$(create_pull_request "${RELEASE_BRANCH}" "${BASE_BRANCH}" "chore: pre-release version ${NEXT_SNAPSHOT_VERSION}" "[skip ci]")
 
   # Summary
   log::success ""
@@ -470,6 +524,7 @@ execute_prerelease_workflow() {
   log::success "=========================================="
   log::success "Pre-release version: ${NEXT_SNAPSHOT_VERSION}"
   log::success "Changes pushed to:   origin/${RELEASE_BRANCH}"
+  log::success "Pull request:        ${PR_URL}"
   log::success "=========================================="
 }
 
