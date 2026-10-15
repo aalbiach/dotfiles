@@ -20,9 +20,5 @@ export DOTFILES_PATH="$HOME/.dotfiles"
 export DOTLY_PATH="$DOTFILES_PATH/modules/dotly"
 export ZDOTDIR=$DOTFILES_PATH/shell/zsh
 
-# Configurations for installed CLI's
-export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
-export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
-
 # Machine-local secrets (not tracked by git)
 [[ -f "$HOME/.zshenv.local" ]] && source "$HOME/.zshenv.local"
