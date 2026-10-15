@@ -57,6 +57,9 @@ if [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
 	# Source plugins.
 	source ${zsh_plugins}.zsh
 
+	# Custom completions (dotly + dotfiles), must be in fpath before compinit
+	fpath=("$DOTLY_PATH/shell/zsh/completions" "$DOTFILES_PATH/shell/zsh/completions" $fpath)
+
 	# compinit after plugins so fpath additions (zsh-completions, pure) are visible.
 	local zcd="${ZDOTDIR:-$HOME}/.zcompdump"
 	autoload -Uz compinit
@@ -82,7 +85,7 @@ fi
 
 
 # Added by Antigravity CLI installer
-export PATH="$HOME/.local/bin:$PATH"
+#export PATH="$HOME/.local/bin:$PATH"
 
 # Added by Antigravity IDE
 export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
