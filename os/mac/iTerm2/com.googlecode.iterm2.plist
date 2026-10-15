@@ -439,10 +439,6 @@ Show Toolbelt</string>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
-	<key>NeverWarnAboutShortLivedSessions_4184CD2B-E98D-4D19-A64E-E7F79C5E1DE2</key>
-	<true/>
-	<key>NeverWarnAboutShortLivedSessions_4184CD2B-E98D-4D19-A64E-E7F79C5E1DE2_selection</key>
-	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1088,7 +1084,7 @@ Show Toolbelt</string>
 					<key>Version</key>
 					<integer>2</integer>
 				</dict>
-				<key>0xf702-0x2a0000-0x7b</key>
+				<key>0xf702-0x2a0000-0x7b-0x1</key>
 				<dict>
 					<key>Action</key>
 					<integer>47</integer>
@@ -1148,7 +1144,7 @@ Show Toolbelt</string>
 					<key>Version</key>
 					<integer>2</integer>
 				</dict>
-				<key>0xf703-0x2a0000-0x7c</key>
+				<key>0xf703-0x2a0000-0x7c-0x1</key>
 				<dict>
 					<key>Action</key>
 					<integer>45</integer>
