@@ -180,7 +180,7 @@ confirm_action() {
 create_release_branch() {
     local branch_name="${1}"
 
-    log::success "Creating branch ${branch_name}..."
+    log::info "Creating branch ${branch_name}..."
     if ! git checkout -b "${branch_name}"; then
         log::error "Failed to create branch ${branch_name}"
         exit 1
@@ -200,7 +200,7 @@ commit_and_push_changes() {
     local current_branch
     current_branch=$(get_current_branch)
 
-    log::success "Committing changes..."
+    log::info "Committing changes..."
     git add pom.xml
 
     if ! git commit -m "${commit_message}" ${description:+-m "${description}"}; then
@@ -209,7 +209,7 @@ commit_and_push_changes() {
     fi
     log::success "Changes committed"
 
-    log::success "Pushing changes to origin/${current_branch}..."
+    log::info "Pushing changes to origin/${current_branch}..."
     if ! git push origin "${current_branch}"; then
         log::error "Failed to push changes to origin/${current_branch}"
         exit 1
@@ -239,7 +239,7 @@ create_pull_request() {
         return 0
     fi
 
-    log::success "Creating pull request ${source_branch} -> ${target_branch}..."
+    log::info "Creating pull request ${source_branch} -> ${target_branch}..."
     if ! pr_url=$(az repos pr create \
         --source-branch "${source_branch}" \
         --target-branch "${target_branch}" \
@@ -268,17 +268,17 @@ check_requirements() {
     if [[ -z "${MAVEN_CMD}" ]]; then
         exit 1
     fi
-    log::success "Using Maven command: ${MAVEN_CMD}"
+    log::info "Using Maven command: ${MAVEN_CMD}"
 }
 
 # Main script starts here
 main() {
   check_requirements
 
-  log::success "Starting release process..."
+  log::info "Starting release process..."
 
   # Check git status
-  log::success "Checking git workspace status..."
+  log::info "Checking git workspace status..."
   local git_status
   git_status=$(git status --porcelain)
   if [[ -n "${git_status}" ]]; then
@@ -288,11 +288,11 @@ main() {
   fi
 
   # Choose workflow type
-  log::success "Choosing workflow type..."
+  log::info "Choosing workflow type..."
   echo ""
-  log::note "What would you like to do?"
-  echo "  1) Create a release (remove -SNAPSHOT, commit, and push)"
-  echo "  2) Create a pre-release (bump version to next -SNAPSHOT)"
+  log::note "What would you like to do?
+  1) Create a release (remove -SNAPSHOT, commit, and push)
+  2) Create a pre-release (bump version to next -SNAPSHOT)"
   echo ""
 
   local workflow_choice
@@ -300,16 +300,16 @@ main() {
       read -r -p "Enter your choice (1-2): " workflow_choice
       case "${workflow_choice}" in
           1)
-              log::success "Selected: Release workflow"
+              log::info "Selected: Release workflow"
 
               # Switch to '${BASE_BRANCH}' and pull latest before releasing
-              log::success "Switching to '${BASE_BRANCH}' branch..."
+              log::info "Switching to '${BASE_BRANCH}' branch..."
               if ! git checkout "${BASE_BRANCH}"; then
                   log::error "Failed to switch to '${BASE_BRANCH}' branch"
                   exit 1
               fi
 
-              log::success "Updating '${BASE_BRANCH}' branch..."
+              log::info "Updating '${BASE_BRANCH}' branch..."
               if ! git pull origin "${BASE_BRANCH}"; then
                   log::error "Failed to update '${BASE_BRANCH}' branch"
                   exit 1
@@ -319,7 +319,7 @@ main() {
               break
               ;;
           2)
-              log::success "Selected: Pre-release workflow"
+              log::info "Selected: Pre-release workflow"
               execute_prerelease_workflow
               break
               ;;
@@ -332,11 +332,11 @@ main() {
 
 # Execute release workflow
 execute_release_workflow() {
-  log::success "Starting release workflow..."
+  log::info "Starting release workflow..."
 
   local CURRENT_VERSION
   CURRENT_VERSION=$(get_current_version)
-  log::success "Current version: ${CURRENT_VERSION}"
+  log::info "Current version: ${CURRENT_VERSION}"
 
   validate_snapshot_version "${CURRENT_VERSION}"
 
@@ -348,11 +348,11 @@ execute_release_workflow() {
   local PATCH_VERSION="${version_options[3]}"
 
   echo ""
-  log::note "Which version would you like to release?"
-  echo "  1) Current version (remove -SNAPSHOT): ${BASE_VERSION}"
-  echo "  2) Major version: ${MAJOR_VERSION}"
-  echo "  3) Minor version: ${MINOR_VERSION}"
-  echo "  4) Patch version: ${PATCH_VERSION}"
+  log::note "Which version would you like to release?
+  1) Current version (remove -SNAPSHOT): ${BASE_VERSION}
+  2) Major version: ${MAJOR_VERSION}
+  3) Minor version: ${MINOR_VERSION}
+  4) Patch version: ${PATCH_VERSION}"
   echo ""
 
   local RELEASE_VERSION
@@ -368,14 +368,14 @@ execute_release_workflow() {
       esac
   done
 
-  log::success "Selected release version: ${RELEASE_VERSION}"
+  log::info "Selected release version: ${RELEASE_VERSION}"
   confirm_action "Proceed with release version ${RELEASE_VERSION}?"
 
   local RELEASE_BRANCH="release/v${RELEASE_VERSION}"
   if ! git::branch_exists "${RELEASE_BRANCH}"; then
     log::warning "Branch ${RELEASE_BRANCH} already exists."
     confirm_action "Reuse existing branch ${RELEASE_BRANCH}?"
-    log::success "Switching to existing branch ${RELEASE_BRANCH}..."
+    log::info "Switching to existing branch ${RELEASE_BRANCH}..."
     if ! git checkout "${RELEASE_BRANCH}"; then
       log::error "Failed to switch to branch ${RELEASE_BRANCH}"
       exit 1
@@ -394,19 +394,19 @@ execute_release_workflow() {
   PR_URL=$(create_pull_request "${RELEASE_BRANCH}" "${TARGET_BRANCH}" "chore: release version ${RELEASE_VERSION}")
 
   # Summary
-  log::success ""
-  log::success "=========================================="
-  log::success "Release completed successfully!"
-  log::success "=========================================="
-  log::success "Released version: ${RELEASE_VERSION}"
-  log::success "Changes pushed to: origin/${RELEASE_BRANCH}"
-  log::success "Pull request:      ${PR_URL}"
-  log::success "=========================================="
+  echo ""
+  log::info "=========================================="
+  log::info "Release completed successfully!"
+  log::info "=========================================="
+  log::info "Released version: ${RELEASE_VERSION}"
+  log::info "Changes pushed to: origin/${RELEASE_BRANCH}"
+  log::info "Pull request:      ${PR_URL}"
+  log::info "=========================================="
 }
 
 # Execute pre-release workflow
 execute_prerelease_workflow() {
-  log::success "Starting pre-release workflow..."
+  log::info "Starting pre-release workflow..."
 
   local CURRENT_BRANCH
   CURRENT_BRANCH=$(get_current_branch)
@@ -426,7 +426,7 @@ execute_prerelease_workflow() {
       RELEASE_BRANCH="release/v${base_version}"
       log::warning "No local release branches found."
       confirm_action "Create and switch to new branch ${RELEASE_BRANCH}?"
-      log::success "Creating branch ${RELEASE_BRANCH}..."
+      log::info "Creating branch ${RELEASE_BRANCH}..."
       if ! git checkout -b "${RELEASE_BRANCH}"; then
         log::error "Failed to create branch ${RELEASE_BRANCH}"
         exit 1
@@ -434,7 +434,7 @@ execute_prerelease_workflow() {
       log::success "Switched to branch ${RELEASE_BRANCH}"
     elif [[ ${#release_branches[@]} -eq 1 ]]; then
       RELEASE_BRANCH="${release_branches[0]}"
-      log::success "Found release branch: ${RELEASE_BRANCH}"
+      log::info "Found release branch: ${RELEASE_BRANCH}"
       confirm_action "Switch to branch ${RELEASE_BRANCH} and proceed with pre-release?"
     else
       echo ""
@@ -458,7 +458,7 @@ execute_prerelease_workflow() {
       done
     fi
 
-    log::success "Switching to branch ${RELEASE_BRANCH}..."
+    log::info "Switching to branch ${RELEASE_BRANCH}..."
     if ! git checkout "${RELEASE_BRANCH}"; then
       log::error "Failed to switch to branch ${RELEASE_BRANCH}"
       exit 1
@@ -468,7 +468,7 @@ execute_prerelease_workflow() {
 
   local CURRENT_VERSION
   CURRENT_VERSION=$(get_current_version)
-  log::success "Current version: ${CURRENT_VERSION}"
+  log::info "Current version: ${CURRENT_VERSION}"
 
   # Remove -SNAPSHOT if present to get base version
   local BASE_VERSION
@@ -485,10 +485,10 @@ execute_prerelease_workflow() {
   local PATCH_VERSION="${version_options[3]}"
 
   echo ""
-  log::note "Which version would you like for the next pre-release?"
-  echo "  1) Patch version: ${PATCH_VERSION}-SNAPSHOT"
-  echo "  2) Minor version: ${MINOR_VERSION}-SNAPSHOT"
-  echo "  3) Major version: ${MAJOR_VERSION}-SNAPSHOT"
+  log::note "Which version would you like for the next pre-release?
+  1) Patch version: ${PATCH_VERSION}-SNAPSHOT
+  2) Minor version: ${MINOR_VERSION}-SNAPSHOT
+  3) Major version: ${MAJOR_VERSION}-SNAPSHOT"
   echo ""
 
   local NEXT_VERSION
@@ -504,11 +504,11 @@ execute_prerelease_workflow() {
   done
 
   local NEXT_SNAPSHOT_VERSION="${NEXT_VERSION}-SNAPSHOT"
-  log::success "Selected pre-release version: ${NEXT_SNAPSHOT_VERSION}"
+  log::info "Selected pre-release version: ${NEXT_SNAPSHOT_VERSION}"
 
   confirm_action "Proceed with pre-release version ${NEXT_SNAPSHOT_VERSION}?"
 
-  log::success "Setting version to ${NEXT_SNAPSHOT_VERSION}..."
+  log::info "Setting version to ${NEXT_SNAPSHOT_VERSION}..."
   set_version "${NEXT_SNAPSHOT_VERSION}"
   log::success "Version set to ${NEXT_SNAPSHOT_VERSION}"
 
@@ -518,14 +518,14 @@ execute_prerelease_workflow() {
   PR_URL=$(create_pull_request "${RELEASE_BRANCH}" "${BASE_BRANCH}" "chore: pre-release version ${NEXT_SNAPSHOT_VERSION}" "[skip ci]")
 
   # Summary
-  log::success ""
-  log::success "=========================================="
-  log::success "Pre-release completed successfully!"
-  log::success "=========================================="
-  log::success "Pre-release version: ${NEXT_SNAPSHOT_VERSION}"
-  log::success "Changes pushed to:   origin/${RELEASE_BRANCH}"
-  log::success "Pull request:        ${PR_URL}"
-  log::success "=========================================="
+  echo ""
+  log::info "=========================================="
+  log::info "Pre-release completed successfully!"
+  log::info "=========================================="
+  log::info "Pre-release version: ${NEXT_SNAPSHOT_VERSION}"
+  log::info "Changes pushed to:   origin/${RELEASE_BRANCH}"
+  log::info "Pull request:        ${PR_URL}"
+  log::info "=========================================="
 }
 
 # Execute main function
